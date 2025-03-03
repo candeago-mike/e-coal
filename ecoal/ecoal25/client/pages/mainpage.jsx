@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import React from "react";
 export const MainPage = () => {
     return (
         <div>
@@ -6,7 +7,7 @@ export const MainPage = () => {
                 <h1>mainPage</h1>
             </div>
             <NavLink to="/">
-                <button>logout</button>
+                <button className="bg-blue-500 border b-1 border-black">logout</button>
             </NavLink>
         </div>
     );
