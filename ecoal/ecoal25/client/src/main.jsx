@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { Login } from "../pages/login.jsx";
 import { MainPage } from "../pages/mainpage.jsx";
 import { Register } from "../pages/register.jsx";
+import { About } from "../pages/about.jsx";
 
 const root = document.getElementById("root");
 
@@ -12,7 +13,8 @@ ReactDOM.createRoot(root).render(
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/anytrypage" element={<MainPage />} />
+      <Route path="/anytrip" element={<MainPage />} />
+      <Route path="/about" element ={<About />} />
     </Routes>
   </BrowserRouter>
 );
