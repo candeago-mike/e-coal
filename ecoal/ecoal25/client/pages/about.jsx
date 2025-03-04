@@ -1,51 +1,73 @@
-import { Logout } from "../src/shared/logout";
-import { GoBack } from "../src/shared/back";
-import React from "react";
+import React from "react"
+import { NavLink } from "react-router-dom"
 
 export const About = () => {
     return (
-        <div className="flex flex-col items-center bg-[#ffffff] min-h-screen p-6 text-[#090920]">
-            <div className="w-full flex justify-between mb-4">
-                <GoBack />
-                <Logout />
-            </div>
+        <>
+            <header className="w-full flex justify-between bg-[#851515] items-center py-4 text-[#E8D1C1] px-6">
+                <NavLink to="/anytrip" className="text-[#E8D1C1] font-semibold hover:text-[#ffffff]">
+                    <h1 className="text-xl font-bold">AnyTrip</h1>
+                </NavLink>
+                <nav className="flex gap-6">
+                    <NavLink to="/anytrip" className="text-[#E8D1C1] font-semibold hover:text-[#ffffff]">
+                        Home
+                    </NavLink>
+                    <NavLink to="/about" className="text-[#E8D1C1] hover:text-[#ffffff] font-semibold">
+                        About Us
+                    </NavLink>
+                    <NavLink to="/" className="text-[#E8D1C1] hover:text-[#ffffff] font-semibold">
+                        Logout
+                    </NavLink>
+                </nav>
+            </header>
 
-            <div className="text-center mb-6">
-                <h1 className="text-3xl font-bold text-[#851515]">
-                    Team AnyTrip
-                </h1>
-            </div>
+            {/* Top Section with Image */}
+            <div className="relative w-full h-[500px]">
+                <img
+                    src="src/images/AboutUs.jpg"
+                    alt="Team AnyTrip"
+                    className="w-full h-full object-cover opacity-60"
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <h1 className="text-2xl text-[#090920] font-bold">ABOUT US</h1>
+                    <i><h2 className="font-bold text-4xl text-[#090920]">Team AnyTrip</h2></i>
+                </div>
 
-            <div className="w-4/5 bg-[#f5f5f5] p-6 rounded-lg shadow-lg">
-                <p className="text-justify text-[#090920] mb-4">
-                    <strong>About us:</strong> We are Carlos, Cheryl, Clea,
-                    Mickey, Hanna, and Fabio – a group of travel enthusiasts
-                    from different corners of the world, united by our passion
-                    for discovering new places and sharing our experiences.
-                </p>
-                <p className="text-justify text-[#090920] mb-4">
-                    As part of our Erasmus project, we created AnyTrip, a mobile
-                    app designed to make travel planning easier, faster, and
-                    more personal. We believe that the best travel tips come
-                    from real experiences. That’s why AnyTrip allows users to
-                    share their short travel entries, recommending places to
-                    visit, where to stay, and what to eat based on their own
-                    adventures.
-                </p>
-                <p className="text-justify text-[#090920] mb-4">
-                    Whether you’re looking for a hidden gem in a bustling city
-                    or the best street food spot in a remote village, our app
-                    helps you find genuine recommendations from fellow
-                    travelers.
-                </p>
-                <p className="text-justify text-[#090920]">
-                    Our goal is to create a community-driven travel guide that
-                    saves time and provides honest insights, making it easier
-                    for everyone to explore the world with confidence. Join us
-                    on AnyTrip and let’s make travel planning effortless and
-                    inspiring—one trip at a time!
-                </p>
             </div>
-        </div>
-    );
-};
+            <div className="relative flex flex-col items-center bg-[#ffffff] min-h-screen p-6 text-[#090920]">
+                {/* Background Section */}
+                <div className="w-4/5 bg-[#F8E6D4] p-8 rounded-lg shadow-lg relative"> {/* Increased padding here */}
+                    {/* Left Border */}
+                    <div className="absolute inset-y-0 left-0 w-[12px]"
+                         style={{
+                             background: "repeating-linear-gradient(to bottom, #851515 0px, #851515 30px, transparent 30px, transparent 40px, #131373 40px, #131373 70px, transparent 70px, transparent 80px)",
+                             backgroundSize: "100% 80px"
+                         }}
+                    ></div>
+
+                    {/* Right Border */}
+                    <div className="absolute inset-y-0 right-0 w-[12px]"
+                         style={{
+                             background: "repeating-linear-gradient(to bottom, #851515 0px, #851515 30px, transparent 30px, transparent 40px, #131373 40px, #131373 70px, transparent 70px, transparent 80px)",
+                             backgroundSize: "100% 80px"
+                         }}
+                    ></div>
+
+                    {/* Text Content */}
+                    <div className="px-8">
+                        <strong><p className="text-xl text-[#090920] mb-4">A Postcard From AnyTrip</p></strong>
+                        <p className="text-justify text-[#090920] mb-4">
+                            We are Carlos, Cheryl, Clea, Mickey, Hanna, and Fabio – a group of travel enthusiasts from different corners of the world, united by our passion for discovering new places and sharing our experiences.
+                        </p>
+                        <p className="text-justify text-[#090920] mb-4">
+                            As part of our Erasmus project, we created AnyTrip, a mobile app designed to make travel planning easier, faster, and more personal.
+                        </p>
+                        <p className="text-justify text-[#090920]">
+                            Join us on AnyTrip and let’s make travel planning effortless and inspiring—one trip at a time!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}

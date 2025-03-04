@@ -19,11 +19,13 @@ export const ArticlePage = () => {
         <Logout />
       </header>
 
+      <div className="relative w-full max-w-2xl"></div>
+
       {trip.mediaURL && (
         <img
           src={trip.mediaURL}
           alt={trip.title}
-          className="w-full max-w-2xl h-auto rounded-lg shadow-lg my-4"
+          className="w-[400px] h-[300px] object-cover rounded-lg shadow-lg my-4 opacity-50" 
         />
       )}
 

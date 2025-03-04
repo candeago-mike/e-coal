@@ -1,0 +1,20 @@
+BORDA COM IMAGEM DA INTERNET
+
+import React from "react";
+
+export const Postcard = ({ trip, onClick }) => {
+  return (
+    <div
+      className="w-full p-4 bg-[#ffffff] rounded-lg shadow-lg cursor-pointer"
+      onClick={onClick}
+      style={{
+        border: "15px solid", // Define a largura da borda
+        borderImage: `url('https://i.ibb.co/GfB1vzd0/border.png') 30 stretch`, // Ajuste para repetir a imagem
+      }}
+    >
+      <h2 className="text-lg font-bold text-[#131373]">{trip.title}</h2>
+      <p className="text-[#851515]">{trip.location}</p>
+      <p className="text-sm text-[#090920]">{trip.description}</p>
+    </div>
+  );
+};
