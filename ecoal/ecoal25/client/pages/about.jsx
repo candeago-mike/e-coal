@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 export const About = () => {
     return (
         <>
-            <header className="w-full flex justify-between bg-[#851515] items-center py-4 text-[#E8D1C1] px-6">
+            <header className="w-full flex justify-between bg-[#090920] items-center py-4 text-[#E8D1C1] px-6">
                 <NavLink to="/anytrip" className="text-[#E8D1C1] font-semibold hover:text-[#ffffff]">
                     <h1 className="text-xl font-bold">AnyTrip</h1>
                 </NavLink>
@@ -36,7 +36,7 @@ export const About = () => {
             </div>
             <div className="relative flex flex-col items-center bg-[#ffffff] min-h-screen p-6 text-[#090920]">
                 {/* Background Section */}
-                <div className="w-4/5 bg-[#F8E6D4] p-8 rounded-lg shadow-lg relative"> {/* Increased padding here */}
+                <div className="w-4/5 bg-[#F8E6D4] p-8 rounded-lg shadow-lg relative mt-10">
                     {/* Left Border */}
                     <div className="absolute inset-y-0 left-0 w-[12px]"
                          style={{
