@@ -5,6 +5,7 @@ import { Login } from "../pages/login.jsx";
 import { MainPage } from "../pages/mainpage.jsx";
 import { Register } from "../pages/register.jsx";
 import { About } from "../pages/about.jsx";
+import { ArticlePage } from "../src/shared/articlePage";
 
 const root = document.getElementById("root");
 
@@ -15,6 +16,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/register" element={<Register />} />
       <Route path="/anytrip" element={<MainPage />} />
       <Route path="/about" element ={<About />} />
+      <Route path="/article/:id" element={<ArticlePage />} />
     </Routes>
   </BrowserRouter>
 );
