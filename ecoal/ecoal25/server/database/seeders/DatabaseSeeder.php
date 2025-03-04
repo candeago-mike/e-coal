@@ -36,9 +36,9 @@ class DatabaseSeeder extends Seeder
             <p>Food in Lens is hearty and delicious. I tried carbonnade flamande, a rich beef stew cooked with beer, and the famous welsh rarebit, which is basically melted cheese heaven! To finish, a slice of tarte au sucre (sugar tart) is a must.</p>
             <p>Lens may not be the most famous French city, but it has a unique charm, a rich history, and some truly unforgettable spots. Definitely worth a visit!</p>
             ',
-            'thumbnailURL' => 'ecoal/ecoal25/client/src/images/Lille1.jpg',
+            'thumbnailURL' => 'ecoal2.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Lens1.jpg',
             'leadStory' => false
         ]);
 
@@ -145,7 +145,7 @@ class DatabaseSeeder extends Seeder
 
         $article = Article::create([
             'title' => 'A city waiting to be discovered, do you know where it is?',
-            'location' => 'Łódź - Pologne<',
+            'location' => 'Łódź - Pologne',
             'content' => 
             '<h1>Łódź - Pologne</h1>
             <p>I recently visited <strong>Łódź</strong>, a city in central Poland that completely took me by surprise. Once an industrial hub, it has transformed into a vibrant, culturally rich destination. Historically, it grew around the textile industry in the 19th century and was known for its bustling factories. Today, the city boasts a fascinating mix of old architecture and modern art, reflecting its past while embracing the future.</p>
