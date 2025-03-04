@@ -38,5 +38,14 @@ Route::group([
     
 });
 
-
+Route::post('/articles', function (Request $request){
+    return Article::create($request->all(
+        'title',
+        'content',
+        'thumbnailURL', 
+            'mediaType',
+            'mediaURL' ,
+            'leadStory' ,
+    ));
+});
 
