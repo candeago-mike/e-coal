@@ -21,7 +21,7 @@ use App\Http\Controllers\ArticlesController;
 */
 
 
-Route::get('/articles', function (){
+Route::get('/articles', function () {
     return Article::all();
 });
 
@@ -35,19 +35,18 @@ Route::group([
     Route::get('/logout',  [AuthController::class, 'logout']);
 
     Route::get('/user',  function (Request $request) {
-                                return $request->user();
-                         });
-    
+        return $request->user();
+    });
 });
 
-Route::post('/articles', function (Request $request){
+Route::post('/articles', function (Request $request) {
     return Article::create($request->all(
         'title',
         'content',
-        'thumbnailURL', 
-            'mediaType',
-            'mediaURL' ,
-            'leadStory' ,
+        'thumbnailURL',
+        'mediaType',
+        'mediaURL',
+        'leadStory',
     ));
 });
 
