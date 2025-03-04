@@ -28,7 +28,9 @@ HTML
 <p>Food in Lens is hearty and delicious. I tried carbonnade flamande, a rich beef stew cooked with beer, and the famous welsh rarebit, which is basically melted cheese heaven! To finish, a slice of tarte au sucre (sugar tart) is a must.</p>
 <p>Lens may not be the most famous French city, but it has a unique charm, a rich history, and some truly unforgettable spots. Definitely worth a visit!</p>
 
+VIDEO
 
+https://youtube.com/shorts/_-aGc7ZuEo4?si=uaoTOppZPv7kauYt
 -----
 
 PARIS - France
@@ -45,6 +47,10 @@ HTML
 <h2>Food to Try</h2>
 <p>Paris is a food lover’s dream! I had the most amazing croissant at Du Pain et des Idées. For a classic Parisian experience, try French onion soup at Bouillon Pigalle. And, of course, macarons from Ladurée or Pierre Hermé are a must!</p>
 <p>Paris is a city you'll want to return to again and again—there's always something new to discover!</p>
+
+VIDEO
+
+https://www.youtube.com/shorts/lrNmXxK1inU
 
 ---
 
@@ -308,6 +314,10 @@ HTML
 <p>When it comes to food, Belfast offers a great variety of local and international options. I had a fantastic traditional <strong>Ulster fry</strong> (a hearty Northern Irish breakfast) and some freshly caught seafood. The city also has plenty of trendy cafes, pubs, and restaurants where you can try both local and global dishes.</p>
 <p><strong>Belfast</strong> is a city that has reinvented itself in recent years, offering a unique mix of history, culture, and contemporary life. It’s a fascinating place to visit, and I left with so much appreciation for its resilience and vibrant energy. If you’re ever in Northern Ireland, <strong>Belfast</strong> is a must!</p>
 
+VIDEO
+
+https://www.youtube.com/shorts/gNM6yGUCSJY
+
 ----
 
 Galway - Ireland
@@ -336,3 +346,8 @@ HTML
 <h2>Food to Try</h2>
 <p>As for food, Galway is a fantastic place for foodies. I tried some delicious seafood, including fresh oysters from the Galway Bay, and I couldn\'t resist trying a traditional Irish stew. The city is known for its lively pub scene, where you can enjoy a pint of Guinness and listen to live traditional Irish music.</p>
 <p>Overall, <strong>Galway</strong> is a city that blends culture, history, and nature effortlessly. Whether you’re strolling through its lively streets, enjoying a quiet moment by the sea, or indulging in some of the best food Ireland has to offer, Galway truly has something for everyone. It\'s a must-visit when in Ireland!</p>
+
+
+VIDEO
+
+https://www.youtube.com/shorts/WDx9Ptg6Ygk
