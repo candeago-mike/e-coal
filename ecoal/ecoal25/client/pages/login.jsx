@@ -28,11 +28,13 @@ export const Login = () => {
                     </div>
 
                     <div className="flex justify-center">
-                        <button
-                            className="bg-[#131373] hover:bg-[#090920] text-white font-bold py-2 px-6 rounded"
-                            type="button">
-                            Login
-                        </button> {/* Blue button, Dark Blue hover, Red focus */}
+                        <NavLink to={"/anytrip"}>
+                            <button
+                                className="bg-[#131373] hover:bg-[#090920] text-white font-bold py-2 px-6 rounded"
+                                type="button">
+                                Login
+                            </button> {/* Blue button, Dark Blue hover, Red focus */}
+                        </NavLink>
                     </div>
                 </form>
 
