@@ -257,8 +257,19 @@ class DatabaseSeeder extends Seeder
             'leadStory' => false
         ]);
 
-        $tag1 = Tag::create(['name' => 'France']);
-        $tag2 = Tag::create(['name' => 'annecy']);
+        $tag1 = Tag::create(['name' => 'Lens']);
+        $tag2 = Tag::create(['name' => 'Annecy']);
+        $tag3 = Tag::create(['name' => 'Toulouse']);
+        $tag4= Tag::create(['name' => 'Vila Nova de Gaia']);
+        $tag5 = Tag::create(['name' => 'Póvoa de Varzim ']);
+        $tag6 = Tag::create(['name' => 'Sines']);
+        $tag7 = Tag::create(['name' => 'Łódź']);
+        $tag8 = Tag::create(['name' => 'Warsaw']);
+        $tag9 = Tag::create(['name' => 'Gdańsk']);
+        $tag10 = Tag::create(['name' => 'Dublin']);
+        $tag11 = Tag::create(['name' => 'Belfast']);
+        $tag12 = Tag::create(['name' => 'Galway']);
+
 
         $article->tags()->attach([$tag1->id, $tag2->id]);
 
