@@ -48,7 +48,10 @@ export const Login = () => {
                         </NavLink>
                     </div>
                 </form>
-                <p className="text-center text-gray-500 text-xs">
+                <p className="text-center text-gray-500 text-xs mt-4">
+                    Don't have an account? <NavLink to="/register" className="text-blue-500">Register</NavLink>
+                </p>
+                <p className="text-center text-gray-500 text-xs mt-4">
                     &copy;2025 AnyTrip Corp. All rights reserved.
                 </p>
             </div>
