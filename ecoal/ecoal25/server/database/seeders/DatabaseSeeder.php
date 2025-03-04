@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
             <p>Food in Lens is hearty and delicious. I tried carbonnade flamande, a rich beef stew cooked with beer, and the famous welsh rarebit, which is basically melted cheese heaven! To finish, a slice of tarte au sucre (sugar tart) is a must.</p>
             <p>Lens may not be the most famous French city, but it has a unique charm, a rich history, and some truly unforgettable spots. Definitely worth a visit!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => 'ecoal/ecoal25/client/src/images/Lille1.jpg',
             'mediaType' => 'image',
             'mediaURL' => 'ecoal.jpg',
             'leadStory' => false
@@ -257,8 +257,19 @@ class DatabaseSeeder extends Seeder
             'leadStory' => false
         ]);
 
-        $tag1 = Tag::create(['name' => 'France']);
-        $tag2 = Tag::create(['name' => 'annecy']);
+        $tag1 = Tag::create(['name' => 'Lens']);
+        $tag2 = Tag::create(['name' => 'Annecy']);
+        $tag3 = Tag::create(['name' => 'Toulouse']);
+        $tag4= Tag::create(['name' => 'Vila Nova de Gaia']);
+        $tag5 = Tag::create(['name' => 'Póvoa de Varzim ']);
+        $tag6 = Tag::create(['name' => 'Sines']);
+        $tag7 = Tag::create(['name' => 'Łódź']);
+        $tag8 = Tag::create(['name' => 'Warsaw']);
+        $tag9 = Tag::create(['name' => 'Gdańsk']);
+        $tag10 = Tag::create(['name' => 'Dublin']);
+        $tag11 = Tag::create(['name' => 'Belfast']);
+        $tag12 = Tag::create(['name' => 'Galway']);
+
 
         $article->tags()->attach([$tag1->id, $tag2->id]);
 
