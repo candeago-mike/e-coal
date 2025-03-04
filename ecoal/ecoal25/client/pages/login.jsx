@@ -25,13 +25,16 @@ export const Login = () => {
                     </div>
                     <div className="flex justify-center">
                         <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
                             type="button">
                             Login
                         </button>
                     </div>
                 </form>
-                <p className="text-center text-gray-500 text-xs">
+                <p className="text-center text-gray-500 text-xs mt-4">
+                    Don't have an account? <NavLink to="/register" className="text-blue-500">Register</NavLink>
+                </p>
+                <p className="text-center text-gray-500 text-xs mt-4">
                     &copy;2025 AnyTrip Corp. All rights reserved.
                 </p>
             </div>

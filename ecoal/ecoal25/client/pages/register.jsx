@@ -1,20 +1,62 @@
-import React from "react";
-import { NavLink } from "react-router";
+import React from "react"
+import { NavLink } from "react-router"
 
 export const Register = () => {
     return (
-        <div className="flex flex-col items-center gap-4">
-            <h1 className="text-3xl">Register for Any Trip</h1>
-            <label>email</label>
-            <input className="border b-1 border-black" type="email" />
-            <label>password</label>
-            <input className="border b-1 border-black" type="password" />
-            <label>confirm password</label>
-            <input className="border b-1 border-black" type="password" />
+        <div className="h-screen w-screen flex items-center justify-center bg-gray-100">
+            <div className="w-full max-w-xs">
+                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                    <h2 className="text-2xl font-bold text-center text-gray-700 mb-4">Register</h2>
 
-            <NavLink to="/">
-                <button className="bg-blue-500 border b-1 border-black">create account</button>
-            </NavLink>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                            Name
+                        </label>
+                        <input
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Full Name"/>
+                    </div>
+
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                            Email
+                        </label>
+                        <input
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="email" type="email" placeholder="Email"/>
+                    </div>
+
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                            Password
+                        </label>
+                        <input
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="password" type="password" placeholder="******"/>
+                    </div>
+
+                    <div className="mb-6">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirm-password">
+                            Confirm Password
+                        </label>
+                        <input
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="confirm-password" type="password" placeholder="******"/>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <button
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="button">
+                            Register
+                        </button>
+                    </div>
+                </form>
+
+                <p className="text-center text-gray-500 text-xs">
+                    Already have an account? <NavLink to="/" className="text-blue-500">Login</NavLink>
+                </p>
+            </div>
         </div>
-    );
-};
+    )
+}
