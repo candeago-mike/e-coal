@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
             <p>Food in Lens is hearty and delicious. I tried carbonnade flamande, a rich beef stew cooked with beer, and the famous welsh rarebit, which is basically melted cheese heaven! To finish, a slice of tarte au sucre (sugar tart) is a must.</p>
             <p>Lens may not be the most famous French city, but it has a unique charm, a rich history, and some truly unforgettable spots. Definitely worth a visit!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => 'ecoal/ecoal25/client/src/images/Lille1.jpg',
             'mediaType' => 'image',
             'mediaURL' => 'ecoal.jpg',
             'leadStory' => false
