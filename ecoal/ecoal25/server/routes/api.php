@@ -1,11 +1,13 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-
-
-use App\Http\Controllers\AuthController;
 use App\Models\Article;
+use Illuminate\Http\Request;
+
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +49,8 @@ Route::post('/articles', function (Request $request) {
         'leadStory',
     ));
 });
+
+
+
+Route::apiResource("users", UsersController::class);
+Route::apiResource("articles", ArticlesController::class);
