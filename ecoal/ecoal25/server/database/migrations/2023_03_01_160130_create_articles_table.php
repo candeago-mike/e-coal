@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('mediaType')->nullable();
             $table->string('mediaURL')->nullable();
             $table->boolean('leadStory');
+            $table->string('location');
             $table->timestamps();
         });
     }

@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Postcard } from "../src/shared/postcard";
+import axios from "axios";
 
-const trips = [
-  { id: 1, title: "Paris Getaway", description: "Experience the city of love.", location: "Paris, France" },
-  { id: 2, title: "Poland Adventure", description: "Explore the vibrant city life.", location: "Łódź, Poland" },
-  { id: 3, title: "Irish Dream", description: "Discover the wild beauty.", location: "Dublin, Ireland" },
-];
 
 export const MainPage = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+  const [trips, setTrips] = useState([]);
+ 
+
+  const fetchTrips = useCallback(async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/api/articles");
+      setTrips(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error fetching trips:", error);
+    }
+  }, []);
+  
+  useEffect(() => {
+    fetchTrips();
+  }, []);
 
   const filteredTrips = trips.filter(trip =>
     trip.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -36,10 +48,9 @@ export const MainPage = () => {
       
       <div className="w-full flex flex-col gap-4">
         {filteredTrips.map((trip) => (
-          <Postcard key={trip.id} trip={trip} onClick={() => navigate(`/article/${trip.id}`)} />
+          <Postcard key={trip.id} trip={trip} onClick={() => navigate(`/article/${trip.id}`, { state: { trip } })} />
         ))}
       </div>
-      
       <footer className="w-full mt-6 py-4 border-t border-[#851515] text-center">
         <NavLink to="/about" className="text-[#851515] font-semibold">About</NavLink>
       </footer>
