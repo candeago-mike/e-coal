@@ -17,6 +17,8 @@ function getCookieValue(name)
         return match[2]
       }
    }
+import { ErrorPage } from "../pages/errorPage";
+
 
 const root = document.getElementById("root");
 const getAccessToken = () => {
