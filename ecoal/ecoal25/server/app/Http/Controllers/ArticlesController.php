@@ -62,6 +62,8 @@ class ArticlesController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->tags()->detach();
+        $article->delete();
+        return response()->json(null, 204);
     }
 }
