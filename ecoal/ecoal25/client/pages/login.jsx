@@ -1,30 +1,61 @@
-import React from "react";
-import { NavLink } from "react-router-dom"; // ✅ Fixed import
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom"; 
 import axios from "axios";
+import { useCookies } from "react-cookie";
 
 export const Login = () => {
+    const [cookies, setCookie] = useCookies(["user"]); 
+    const navigate = useNavigate(); 
+    const [loading, setLoading] = useState(false);
+
     async function handleLogin(event) {
         event.preventDefault();
+        setLoading(true);
+
         const formData = new FormData(event.target);
         const email = formData.get("email");
         const password = formData.get("password");
 
         try {
-            const response = await axios.post(
+            // Step 1: Login Request
+            const loginResponse = await axios.post(
                 "http://localhost:8000/api/login",
                 { email, password },
                 { headers: { "Content-Type": "application/json" } }
             );
 
-            if (response.status === 200) {
-                alert("Login successful");
-                window.location.href = "/anytrip"; 
+            if (loginResponse.status === 200) {
+                const token = loginResponse.data.token;
+
+                // Step 2: Fetch Users List
+                const usersResponse = await axios.get("http://localhost:8000/api/users", {
+                    headers: { Authorization: `Bearer ${token}` },
+                });
+
+                if (usersResponse.status === 200) {
+                    const users = usersResponse.data; 
+                    console.log(users)
+                    
+                    const user = users.find(user => user.email === email);
+
+                    if (user) {
+                        setCookie("user", { name: user.name, token }, { path: "/anytrip", maxAge: 3600 });
+                        alert(`Welcome, ${user.name}!`);
+                        navigate("/anytrip");
+                    } else {
+                        alert("User not found.");
+                    }
+                } else {
+                    alert("Failed to fetch user details.");
+                }
             } else {
-                alert(response.data.message || "Login failed");
+                alert(loginResponse.data.message || "Login failed");
             }
         } catch (error) {
             console.error("Login error:", error.response?.data || error);
             alert(error.response?.data?.message || "An error occurred during login");
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -41,7 +72,7 @@ export const Login = () => {
                         <input
                             className="shadow appearance-none border border-[#C7AE96] rounded w-full py-2 px-3 text-[#090920] leading-tight focus:outline-none focus:ring-1 focus:ring-[#851515]"
                             id="email"
-                            name="email" // ✅ Added name
+                            name="email" 
                             type="email"
                             placeholder="Email"
                             required
@@ -55,7 +86,7 @@ export const Login = () => {
                         <input
                             className="shadow appearance-none border border-[#C7AE96] rounded w-full py-2 px-3 text-[#090920] leading-tight focus:outline-none focus:ring-1 focus:ring-[#851515]"
                             id="password"
-                            name="password" // ✅ Added name
+                            name="password" 
                             type="password"
                             placeholder="******"
                             required
@@ -65,9 +96,10 @@ export const Login = () => {
                     <div className="flex justify-center">
                         <button
                             className="bg-[#131373] hover:bg-[#090920] text-white font-bold py-2 px-6 mt-2 rounded"
-                            type="submit" 
+                            type="submit"
+                            disabled={loading} 
                         >
-                            Login
+                            {loading ? "Logging in..." : "Login"}
                         </button>
                     </div>
                 </form>
