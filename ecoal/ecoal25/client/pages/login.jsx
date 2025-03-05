@@ -23,23 +23,22 @@ export const Login = () => {
                 { email, password },
                 { headers: { "Content-Type": "application/json" } }
             );
-
+            
             if (loginResponse.status === 200) {
-                const token = loginResponse.data.token;
-
-                // Step 2: Fetch Users List
+                const token = loginResponse.data.access_token;
+                console.log(token)
                 const usersResponse = await axios.get("http://localhost:8000/api/users", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
+                console.log( loginResponse.data.token)
 
                 if (usersResponse.status === 200) {
                     const users = usersResponse.data; 
                     console.log(users)
-                    
                     const user = users.find(user => user.email === email);
-
                     if (user) {
-                        setCookie("user", { name: user.name, token }, { path: "/anytrip", maxAge: 3600 });
+                        setCookie("accessToken", token, { path: "/", maxAge: 3600 }); 
+
                         alert(`Welcome, ${user.name}!`);
                         navigate("/anytrip");
                     } else {
