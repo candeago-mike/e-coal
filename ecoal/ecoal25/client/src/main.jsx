@@ -7,12 +7,8 @@ import { MainPage } from "../pages/mainpage.jsx";
 import { Register } from "../pages/register.jsx";
 import { About } from "../pages/about.jsx";
 import { ArticlePage } from "../src/shared/articlePage";
+import { ErrorPage } from "../pages/errorPage";
 
-const ProtectedRoute = ({ children }) => {
-    const [cookies] = useCookies(["user"]); 
-    
-    return cookies.user?.token ? children : <Navigate to="/" replace />;
-};
 
 const root = document.getElementById("root");
 
@@ -22,10 +18,10 @@ ReactDOM.createRoot(root).render(
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/anytrip" element={<ProtectedRoute><MainPage /></ProtectedRoute>} />
-        <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-        <Route path="/article/:id" element={<ProtectedRoute><ArticlePage /></ProtectedRoute>} />
-
+        <Route path="/anytrip" element={<MainPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/article/:id" element={<ArticlePage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   </CookiesProvider>
