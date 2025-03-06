@@ -149,6 +149,7 @@ export const MainPage = () => {
                             />
                         ))}
                     </div>
+                    <div className="mb-20"></div>
                 </div>
             </div>
             <Footer />
