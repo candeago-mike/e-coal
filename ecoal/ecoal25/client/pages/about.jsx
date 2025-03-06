@@ -41,7 +41,7 @@ export const About = () => {
                     ></div>
 
                     {/* Text Content */}
-                    <div className="px-8">
+                    <div className="px-2">
                         <strong><p className="text-xl text-[#131373] mb-4">A Postcard From AnyTrip</p></strong>
                         <p className="text-justify text-[#090920] mb-4">
                             We are Carlos, Cheryl, Clea, Mike, Hanna, and Fabio – a group of travel enthusiasts from different corners of the world, united by our passion for discovering new places and sharing our experiences.
@@ -56,7 +56,7 @@ export const About = () => {
                         <img
                             src="src/images/GroupPic.jpeg"
                             alt="Team AnyTrip"
-                            className="w-full object-cover"
+                            className="w-full h-auto object-contain rounded-lg shadow-lg"
                         />
                         </div>
                     </div>
