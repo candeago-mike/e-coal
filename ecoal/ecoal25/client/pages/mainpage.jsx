@@ -12,6 +12,7 @@ export const MainPage = () => {
     const [trips, setTrips] = useState([]);
     const [tripText, setTripText] = useState("To Any Trip.");
     const [isVisible, setIsVisible] = useState(true); // Controls fade effect
+
     // const [username, setUsername] = useState("");
 
     // async function getUsername() {
@@ -27,8 +28,6 @@ export const MainPage = () => {
     //     }
     // }
 
-
-
     // Toggle text with fade-out and fade-in effect
     useEffect(() => {
         const interval = setInterval(() => {
@@ -36,7 +35,7 @@ export const MainPage = () => {
             setTimeout(() => {
                 setTripText((prevText) =>
                     prevText === "To Any Trip."
-                        ? "For Every Trip."
+                        ? "To Every Trip."
                         : "To Any Trip."
                 );
                 setIsVisible(true); // Start fade-in
@@ -96,7 +95,11 @@ export const MainPage = () => {
                                 isVisible ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            {tripText}
+                            <span>To </span>
+                            <span className="text-[#851515]">
+                                {tripText.split(' ')[1]}
+                            </span>
+                            <span> Trip.</span>
                         </h2>
                     </i>
                 </div>
