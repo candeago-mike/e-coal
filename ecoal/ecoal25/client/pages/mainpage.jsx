@@ -11,13 +11,44 @@ export const MainPage = () => {
     const [trips, setTrips] = useState([]);
     const [tripText, setTripText] = useState("To Any Trip.");
     const [isVisible, setIsVisible] = useState(true); // Controls fade effect
+    // const [username, setUsername] = useState("");
 
+    // async function getUsername() {
+    //     try {
+    //         const user = await axios.get("http://localhost:8000/api/users");
+    //         if (user.status === 200) {
+    //             const users = user.data;
+    //             const user = users.find((user) => user.email === email);
+
+    //         }
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // }
+
+    function getCookieValue(name) {
+        const regex = new RegExp(`(^| )${name}=([^;]+)`);
+        const match = document.cookie.match(regex);
+        if (match) {
+            return match[2];
+        }
+    }
+
+    const getAccessToken = () => {
+        return getCookieValue("accessToken") != undefined;
+    };
+
+    
     // Toggle text with fade-out and fade-in effect
     useEffect(() => {
         const interval = setInterval(() => {
             setIsVisible(false); // Start fade-out
             setTimeout(() => {
-                setTripText((prevText) => (prevText === "To Any Trip." ? "For Every Trip." : "To Any Trip."));
+                setTripText((prevText) =>
+                    prevText === "To Any Trip."
+                        ? "For Every Trip."
+                        : "To Any Trip."
+                );
                 setIsVisible(true); // Start fade-in
             }, 500); // Wait for fade-out before changing text
         }, 2000); // Runs every 2 seconds
@@ -27,7 +58,9 @@ export const MainPage = () => {
 
     const fetchTrips = useCallback(async () => {
         try {
-            const response = await axios.get("http://localhost:8000/api/articles");
+            const response = await axios.get(
+                "http://localhost:8000/api/articles"
+            );
             setTrips(response.data);
             console.log(response.data);
         } catch (error) {
@@ -39,14 +72,19 @@ export const MainPage = () => {
         fetchTrips();
     }, [fetchTrips]);
 
-    const filteredTrips = trips.filter(trip =>
-        trip.title.toLowerCase().includes(search.toLowerCase()) ||
-        (trip.tags && Array.isArray(trip.tags) && trip.tags.some(tag =>
-            typeof tag === 'string' ? tag.toLowerCase().includes(search.toLowerCase())
-                : tag.name.toLowerCase().includes(search.toLowerCase())
-        )) ||
-        (trip.location && trip.location.toLowerCase().includes(search.toLowerCase()))
-    )
+    const filteredTrips = trips.filter(
+        (trip) =>
+            trip.title.toLowerCase().includes(search.toLowerCase()) ||
+            (trip.tags &&
+                Array.isArray(trip.tags) &&
+                trip.tags.some((tag) =>
+                    typeof tag === "string"
+                        ? tag.toLowerCase().includes(search.toLowerCase())
+                        : tag.name.toLowerCase().includes(search.toLowerCase())
+                )) ||
+            (trip.location &&
+                trip.location.toLowerCase().includes(search.toLowerCase()))
+    );
 
     return (
         <>
@@ -59,7 +97,9 @@ export const MainPage = () => {
                     className="w-full h-full object-cover opacity-90"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center w-full px-4">
-                    <h1 className="text-2xl text-[#090920] font-bold">From AnyTrip</h1>
+                    <h1 className="text-2xl text-[#090920] font-bold">
+                        From AnyTrip
+                    </h1>
                     <i>
                         <h2
                             className={`font-bold text-4xl text-[#090920] transition-opacity duration-500 ${
@@ -76,8 +116,14 @@ export const MainPage = () => {
             <div className="relative w-full bg-white p-2 rounded-t-3xl shadow-2xl shadow-gray-500/50 -top-16">
                 <div className="bg-[#ffffff] min-h-screen p-4 text-[#131373] flex flex-col items-center">
                     <header className="w-full flex justify-between items-center py-4 border-b border-[#851515]">
-                        <h1 className="text-xl font-bold">Welcome to AnyTrip!</h1>
-                        <NavLink to={"/addarticle"} />
+                        <h1 className="text-xl font-bold">
+                            Welcome to AnyTrip!
+                        </h1>
+                        {getAccessToken ? (
+                            <NavLink to={"/addarticle"}>Add Article</NavLink>
+                        ) : (
+                            null
+                        )}
                     </header>
 
                     <div className="w-full my-4">
@@ -92,7 +138,15 @@ export const MainPage = () => {
 
                     <div className="w-full flex flex-col gap-4">
                         {filteredTrips.map((trip) => (
-                            <Postcard key={trip.id} trip={trip} onClick={() => navigate(`/article/${trip.id}`, { state: { trip } })} />
+                            <Postcard
+                                key={trip.id}
+                                trip={trip}
+                                onClick={() =>
+                                    navigate(`/article/${trip.id}`, {
+                                        state: { trip },
+                                    })
+                                }
+                            />
                         ))}
                     </div>
                 </div>

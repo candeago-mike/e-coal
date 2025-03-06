@@ -27,23 +27,23 @@ const isAuthenticated = () => {
     return !!getAccessToken();
 };
 ReactDOM.createRoot(root).render(
-    <CookiesProvider defaultSetOptions={{ path: "/" }}>
+    <CookiesProvider>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                {/* {isAuthenticated() ? ( */}
+                <Route path="/anytrip" element={<MainPage />} />
+                {/* ) : null} */}
+                {/* {isAuthenticated() ? ( */}
+                <Route path="/about" element={<About />} />
+                {/* ) : null} */}
+                {/* {isAuthenticated() ? ( */}
+                <Route path="/article/:id" element={<ArticlePage />} />
+                {/* ) : null} */}
                 {isAuthenticated() ? (
-                    <Route path="/anytrip" element={<MainPage />} />
-                ) : null}
-                {isAuthenticated() ? (
-                    <Route path="/about" element={<About />} />
-                ) : null}
-                {isAuthenticated() ? (
-                    <Route path="/article/:id" element={<ArticlePage />} />
-                ) : null}
-                {isAuthenticated() ? (
-                    <Route path="/addarticle" element={<AddArticle />} />
-                ) : null}
+                <Route path="/addarticle" element={<AddArticle />} />
+                 ) : null} 
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
