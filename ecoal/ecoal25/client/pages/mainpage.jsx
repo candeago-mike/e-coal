@@ -26,7 +26,10 @@ export const MainPage = () => {
 
   const filteredTrips = trips.filter(trip =>
     trip.title.toLowerCase().includes(search.toLowerCase()) ||
-    (Array.isArray(trip.tags) && trip.tags.filter(tag => typeof tag === 'string').some(tag => tag.toLowerCase().includes(search.toLowerCase())))
+    (trip.tags && Array.isArray(trip.tags) && trip.tags.some(tag => 
+      typeof tag === 'string' ? tag.toLowerCase().includes(search.toLowerCase()) 
+      : tag.name.toLowerCase().includes(search.toLowerCase())
+    ))
   );
 
   return (
@@ -41,7 +44,7 @@ export const MainPage = () => {
           <div className="w-full my-4">
             <input
               type="text"
-              placeholder="Search trips..."
+              placeholder="Search trips by title or tags..."
               className="w-full p-2 border border-[#851515] rounded-lg"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -55,7 +58,6 @@ export const MainPage = () => {
           </div>
           <Footer />
         </div>
-
     </>
   );
 };
