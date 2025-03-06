@@ -23,7 +23,7 @@ export const About = () => {
 
             <div className="relative flex flex-col items-center bg-[#ffffff] min-h-screen p-6 text-[#090920]">
                 {/* Background Section */}
-                <div className="w-4/5 bg-[#F8E6D4] p-8 rounded-lg shadow-lg relative mt-10">
+                <div className="w-4/5 bg-[#FAF0E6] p-8 rounded-lg shadow-lg relative mt-10">
                     {/* Left Border */}
                     <div className="absolute inset-y-0 left-0 w-[12px]"
                          style={{
