@@ -8,38 +8,45 @@ import { Register } from "../pages/register.jsx";
 import { About } from "../pages/about.jsx";
 import { ArticlePage } from "../src/shared/articlePage";
 import ProtectedRoute from "./shared/protectedRoute.jsx";
+import { AddArticle } from "../pages/addArticle.jsx";
 
-function getCookieValue(name) 
-    {
-      const regex = new RegExp(`(^| )${name}=([^;]+)`)
-      const match = document.cookie.match(regex)
-      if (match) {
-        return match[2]
-      }
-   }
+function getCookieValue(name) {
+    const regex = new RegExp(`(^| )${name}=([^;]+)`);
+    const match = document.cookie.match(regex);
+    if (match) {
+        return match[2];
+    }
+}
 import { ErrorPage } from "../pages/errorPage";
-
 
 const root = document.getElementById("root");
 const getAccessToken = () => {
-  return getCookieValue("accessToken")!= undefined
-
-}
+    return getCookieValue("accessToken") != undefined;
+};
 
 const isAuthenticated = () => {
-  return !!getAccessToken();
-}
+    return !!getAccessToken();
+};
 ReactDOM.createRoot(root).render(
-  <CookiesProvider defaultSetOptions={{ path: '/' }}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        {isAuthenticated() ? <Route path="/anytrip" element={<MainPage />} /> :null  }
-        {isAuthenticated() ? <Route path="/about" element={<About />} /> :null}
-        {isAuthenticated() ? <Route path="/article/:id" element={<ArticlePage />} /> :null}
-        <Route path="*" element={<Login/>} />
-      </Routes>
-    </BrowserRouter>
-  </CookiesProvider>
+    <CookiesProvider defaultSetOptions={{ path: "/" }}>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                {isAuthenticated() ? (
+                    <Route path="/anytrip" element={<MainPage />} />
+                ) : null}
+                {isAuthenticated() ? (
+                    <Route path="/about" element={<About />} />
+                ) : null}
+                {isAuthenticated() ? (
+                    <Route path="/article/:id" element={<ArticlePage />} />
+                ) : null}
+                {isAuthenticated() ? (
+                    <Route path="/addarticle" element={<AddArticle />} />
+                ) : null}
+                <Route path="*" element={<Login />} />
+            </Routes>
+        </BrowserRouter>
+    </CookiesProvider>
 );
