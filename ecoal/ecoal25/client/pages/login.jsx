@@ -79,7 +79,7 @@
                                 
                                 // Short delay to allow the alert to be seen
                                 setTimeout(() => {
-                                    navigate("/anytrip");
+                                    navigate("/");
                                 }, 1500);
                             } else {
                                 showAlert("User not found in system. Please contact support.", "error");

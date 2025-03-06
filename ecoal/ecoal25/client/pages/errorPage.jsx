@@ -19,7 +19,7 @@ export const ErrorPage = () => {
                     <i><h2 className="font-bold text-4xl text-[#090920]">404</h2></i>
                     <p className="text-[#090920]">Oops you are in a wrong place</p>
                     <button
-                        onClick={() => window.location.href = '/anytrip'}
+                        onClick={() => window.location.href = '/'}
                         className="mt-4 px-4 py-2 bg-[#090920] text-white rounded hover:bg-blue-700"
                     >
                         Go to Home Page

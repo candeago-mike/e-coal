@@ -15,7 +15,7 @@ export const Logout = () => {
         if (type === "success") {
             setTimeout(() => {
                 setAlert({ show: false, message: "", type: "" });
-                navigate("/anytrip"); 
+                navigate("/"); 
             }, 5000);
         }
     };

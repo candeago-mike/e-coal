@@ -32,10 +32,10 @@ ReactDOM.createRoot(root).render(
     <CookiesProvider>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 {/* {isAuthenticated() ? ( */}
-                <Route path="/anytrip" element={<MainPage />} />
+                <Route path="/" element={<MainPage />} />
                 {/* ) : null} */}
                 {/* {isAuthenticated() ? ( */}
                 <Route path="/about" element={<About />} />

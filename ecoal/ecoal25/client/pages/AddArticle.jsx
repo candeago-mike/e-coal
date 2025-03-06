@@ -173,7 +173,7 @@ export const AddArticle = () => {
                                     Submit Article
                                 </button>
                                 <NavLink
-                                    to={"/anytrip"}
+                                    to={"/"}
                                     className="text-[#851515] mt-3"
                                 >
                                     <b>Cancel</b>
