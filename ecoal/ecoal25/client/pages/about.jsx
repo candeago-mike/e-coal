@@ -54,6 +54,9 @@ export const About = () => {
                     </div>
                 </div>
             </div>
+            <p className="text-center text-[#090920] text-xs mb-20">
+                &copy;2025 AnyTrip Corp. All rights reserved.
+            </p>
         </>
     )
 }
