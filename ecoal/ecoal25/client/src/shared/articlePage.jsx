@@ -42,7 +42,7 @@ export const ArticlePage = () => {
                 <h2 className="font-bold text-2xl text-[#851515] text-center italic">By Team AnyTrip</h2>
 
                 {/* Content Section with Border on the Left */}
-                <div className="flex mx-auto w-[90%] mt-6">
+                <div className="flex mx-auto w-[90%] mt-10">
                     {/* Left Border */}
                     <div className="w-[10px] mr-6"
                          style={{
@@ -56,7 +56,7 @@ export const ArticlePage = () => {
                          dangerouslySetInnerHTML={{__html: trip.content}}/>
                 </div>
 
-                <p className="text-sm text-gray-600 mt-4 text-center">Published: {trip.created_at}</p>
+                <p className="text-sm text-gray-600 mt-20 text-center">Published: {trip.created_at}</p>
                 <p className="text-sm text-gray-600 text-center">Location: {trip.location}</p>
 
                 <div className="mb-20"></div>

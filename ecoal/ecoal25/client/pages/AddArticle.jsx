@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Header } from "../src/shared/Header";
+import {Footer} from "../src/shared/Footer.jsx";
 export const AddArticle = () => {
     const [title, setTitle] = useState("");
     const [location, setLocation] = useState("");
@@ -122,6 +123,7 @@ export const AddArticle = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };
