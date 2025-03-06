@@ -2,23 +2,10 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import { Logout } from "./logout";
 import { Cookies, CookiesProvider } from "react-cookie";
+import { getAccessToken } from "../main";
 
 export const Header = () => {
-    function getCookieValue(name) {
-        const regex = new RegExp(`(^| )${name}=([^;]+)`);
-        const match = document.cookie.match(regex);
-        if (match) {
-            return match[2];
-        }
-    }
-
-    const getAccessToken = () => {
-        return getCookieValue("accessToken") != undefined;
-    };
-
-    const isAuthenticated = () => {
-        return !!getAccessToken();
-    };
+    
     return (
         <header className="w-full flex justify-between bg-[#090920] items-center py-4 text-[#E8D1C1] px-6">
             <NavLink

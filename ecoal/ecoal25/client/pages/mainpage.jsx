@@ -4,6 +4,7 @@ import { Header } from "../src/shared/Header";
 import { Footer } from "../src/shared/Footer";
 import { Postcard } from "../src/shared/postcard";
 import axios from "axios";
+import { getAccessToken, isAuthenticated } from "../src/main";
 
 export const MainPage = () => {
     const [search, setSearch] = useState("");
@@ -26,18 +27,7 @@ export const MainPage = () => {
     //     }
     // }
 
-    function getCookieValue(name) {
-        const regex = new RegExp(`(^| )${name}=([^;]+)`);
-        const match = document.cookie.match(regex);
-        if (match) {
-            return match[2];
-        }
-    }
-
-    const getAccessToken = () => {
-        return getCookieValue("accessToken") != undefined;
-    };
-
+  
     
     // Toggle text with fade-out and fade-in effect
     useEffect(() => {
@@ -85,7 +75,7 @@ export const MainPage = () => {
             (trip.location &&
                 trip.location.toLowerCase().includes(search.toLowerCase()))
     );
-
+    
     return (
         <>
             <Header />
@@ -119,7 +109,7 @@ export const MainPage = () => {
                         <h1 className="text-xl font-bold">
                             Welcome to AnyTrip!
                         </h1>
-                        {getAccessToken ? (
+                        {getAccessToken() ? (
                             <NavLink to={"/addarticle"}>Add Article</NavLink>
                         ) : (
                             null

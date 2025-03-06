@@ -10,7 +10,8 @@ import { ArticlePage } from "../src/shared/articlePage";
 import ProtectedRoute from "./shared/protectedRoute.jsx";
 import { AddArticle } from "../pages/addArticle.jsx";
 import { ErrorPage } from "../pages/errorPage";
-function getCookieValue(name) {
+
+export function getCookieValue(name) {
     const regex = new RegExp(`(^| )${name}=([^;]+)`);
     const match = document.cookie.match(regex);
     if (match) {
@@ -19,11 +20,11 @@ function getCookieValue(name) {
 }
 
 const root = document.getElementById("root");
-const getAccessToken = () => {
+export const getAccessToken = () => {
     return getCookieValue("accessToken") != undefined;
 };
 
-const isAuthenticated = () => {
+export const isAuthenticated = () => {
     return !!getAccessToken();
 };
 ReactDOM.createRoot(root).render(
