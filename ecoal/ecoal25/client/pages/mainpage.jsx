@@ -32,7 +32,7 @@ export const MainPage = () => {
 
   return (
       <>
-          <Header />
+        <Header />
         <div className="bg-[#ffffff] min-h-screen p-4 text-[#131373] flex flex-col items-center">
           <header className="w-full flex justify-between items-center py-4 border-b border-[#851515]">
             <h1 className="text-xl font-bold">Welcome to AnyTrip!</h1>
