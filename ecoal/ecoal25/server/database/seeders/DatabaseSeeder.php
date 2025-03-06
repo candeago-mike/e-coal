@@ -26,8 +26,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'My Unforgettable Journey to Lens',
             'location' => 'Lens - France',
             'content' => 
-            '<h1>Lens - France</h1>
-            <p>I recently had the chance to visit Lens, a small but fascinating city in northern France, and I have to say—it really surprised me! Known for its coal-mining past, Lens has reinvented itself as a cultural hub, blending history, art, and local charm.</p>
+            '<p>I recently had the chance to visit Lens, a small but fascinating city in northern France, and I have to say—it really surprised me! Known for its coal-mining past, Lens has reinvented itself as a cultural hub, blending history, art, and local charm.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed at Hôtel Louvre-Lens, a beautifully renovated former mining house that combines modern comfort with the city’s industrial heritage. If you\'re on a budget, there are plenty of affordable options, like B&B Hôtel Lens Musée du Louvre. Getting to Lens is easy—just over an hour by train from Paris. The city itself is compact, so walking is a great way to explore, but buses and taxis are available too.</p>
             <h2>Must-See Places</h2>
@@ -47,8 +46,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Ever wondered where Annecy is?',
             'location' => 'Annecy - France',
             'content' => 
-            '<h1>Annecy - France</h1>
-            <p>I recently had the chance to visit Annecy, and honestly, it felt like stepping into a postcard. Nestled in the French Alps, this charming lakeside town is often called the "Venice of the Alps" because of its beautiful canals, pastel-colored houses, and stunning mountain views.</p>
+            '<p>I recently had the chance to visit Annecy, and honestly, it felt like stepping into a postcard. Nestled in the French Alps, this charming lakeside town is often called the "Venice of the Alps" because of its beautiful canals, pastel-colored houses, and stunning mountain views.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed at Hôtel du Palais de l’Isle, a cozy boutique hotel right in the heart of the old town. If you’re looking for a more luxurious experience, Les Trésoms Lake & Spa Resort offers breathtaking views of Lake Annecy. The best way to get around? Walk! The town is super pedestrian-friendly, but you can also rent a bike or take a boat across the lake for a different perspective.</p>
             <h2>Must-See Places</h2>
@@ -67,8 +65,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'The city you didn\'t know where to find',
             'location' => 'Toulouse - France',
             'content' => 
-            '<h1>Toulouse - France</h1>
-            <p>I recently visited <strong>Toulouse</strong>, also known as “La Ville Rose” (The Pink City) due to its beautiful terracotta brick buildings. Located in the southwest of France, this lively city offers a perfect blend of history, culture, and gastronomy.</p>
+            '<p>I recently visited <strong>Toulouse</strong>, also known as “La Ville Rose” (The Pink City) due to its beautiful terracotta brick buildings. Located in the southwest of France, this lively city offers a perfect blend of history, culture, and gastronomy.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed at <strong>Hôtel Albert 1er</strong>, a charming and centrally located hotel. For a more luxurious experience, <strong>La Cour des Consuls Hotel & Spa</strong> is a fantastic option. Toulouse has a well-connected public transport system with metro lines, buses, and trams, making it easy to explore. However, the best way to experience the historic center is on foot.</p>
             <h2>Must-See Places</h2>
@@ -88,8 +85,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'I found the hidden gem on North of Portugal.',
             'location' => 'Vila Nova de Gaia - Portugal',
             'content' => 
-            '<h1>Vila Nova de Gaia - Portugal</h1>
-            <p>I recently visited <strong>Vila Nova de Gaia</strong>, a beautiful city just across the Douro River from Porto, in northern Portugal. Known for its world-famous port wine cellars and stunning views of Porto’s skyline, Gaia offers a mix of tradition, history, and breathtaking scenery.</p>
+            '<p>I recently visited <strong>Vila Nova de Gaia</strong>, a beautiful city just across the Douro River from Porto, in northern Portugal. Known for its world-famous port wine cellars and stunning views of Porto’s skyline, Gaia offers a mix of tradition, history, and breathtaking scenery.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed at <strong>The Yeatman</strong>, a luxury wine hotel with spectacular views over the river. For a more budget-friendly stay, <strong>Rubens Hotels Royal Village</strong> is a great option, offering comfort and a central location. Getting around Gaia is easy—most attractions are within walking distance, but you can also take the metro, buses, or even a river taxi to explore the area.</p>
             <h2>Must-See Places</h2>
@@ -108,8 +104,8 @@ class DatabaseSeeder extends Seeder
         $article = Article::create([
             'title' => 'Like Fish?? This city you must visit.',
             'location' => 'Póvoa de Varzim - Portugal',
-            'content' => '<h1>Póvoa de Varzim - Portugal</h1>
-            <p>I recently visited <strong>Póvoa de Varzim</strong>, a charming coastal city in northern Portugal, known for its stunning beaches, rich history, and delicious seafood. Located just 30 minutes from Porto, this vibrant town is perfect for a relaxing getaway by the Atlantic Ocean.</p>
+            'content' => 
+            '<p>I recently visited <strong>Póvoa de Varzim</strong>, a charming coastal city in northern Portugal, known for its stunning beaches, rich history, and delicious seafood. Located just 30 minutes from Porto, this vibrant town is perfect for a relaxing getaway by the Atlantic Ocean.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed at <strong>Grande Hotel da Póvoa</strong>, a classic hotel right by the beach and casino. If you prefer something more modern, <strong>Axis Vermar Conference & Beach Hotel</strong> is a great choice with sea views and a pool. Getting around Póvoa is easy—the city is compact, so walking is the best way to explore. However, the <strong>Metro do Porto</strong> connects Póvoa to Porto, making day trips convenient.</p>
             <h2>Must-See Places</h2>
@@ -129,8 +125,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'The city that will surprise you.',
             'location' => 'Sines - Portugal',
             'content' => 
-            '<h1>Sines - Portugal</h1>
-            <p>I recently visited <strong>Sines</strong>, a coastal gem in southern Portugal, known for its stunning beaches, maritime heritage, and connection to the famous explorer Vasco da Gama. Located in the Alentejo region, Sines offers a mix of history, nature, and authentic Portuguese charm.</p>
+            '<p>I recently visited <strong>Sines</strong>, a coastal gem in southern Portugal, known for its stunning beaches, maritime heritage, and connection to the famous explorer Vasco da Gama. Located in the Alentejo region, Sines offers a mix of history, nature, and authentic Portuguese charm.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed at <strong>Hotel Dom Vasco</strong>, a cozy and elegant hotel with a welcoming atmosphere. For a more budget-friendly option, <strong>Sinerama Hotel Apartamento</strong> provides comfortable rooms with great views. Sines is a small town, so walking is the best way to explore, but if you want to visit nearby beaches, having a car is a good idea.</p>
             <h2>Must-See Places</h2>
@@ -149,8 +144,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'A city waiting to be discovered, do you know where it is?',
             'location' => 'Łódź - Pologne',
             'content' => 
-            '<h1>Łódź - Pologne</h1>
-            <p>I recently visited <strong>Łódź</strong>, a city in central Poland that completely took me by surprise. Once an industrial hub, it has transformed into a vibrant, culturally rich destination. Historically, it grew around the textile industry in the 19th century and was known for its bustling factories. Today, the city boasts a fascinating mix of old architecture and modern art, reflecting its past while embracing the future.</p>
+            '<p>I recently visited <strong>Łódź</strong>, a city in central Poland that completely took me by surprise. Once an industrial hub, it has transformed into a vibrant, culturally rich destination. Historically, it grew around the textile industry in the 19th century and was known for its bustling factories. Today, the city boasts a fascinating mix of old architecture and modern art, reflecting its past while embracing the future.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>Accommodation in Łódź is quite affordable compared to other European cities. I stayed at a charming boutique hotel on <strong>Piotrkowska Street</strong>, the city’s main thoroughfare, which is lined with lovely cafes, restaurants, and shops. Whether you\'re looking for a budget-friendly hostel or a stylish, upscale hotel, there\'s something for everyone.</p>
             <p>Getting around the city is easy, with a well-connected public transport system including trams and buses. I found it convenient to use the trams to explore different parts of the city. Taxis and ride-sharing services like Uber are also readily available.</p>
@@ -170,8 +164,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'The city that i never thought i would visit.',
             'location' => 'Warsaw - Pologne',
             'content' => 
-            '<h1>Warsaw - Pologne</h1>
-            <p>I recently spent some time in <strong>Warsaw</strong>, the capital of Poland, and I have to say it exceeded my expectations. The city has an incredible blend of history, modernity, and culture, making it a fascinating place to explore. Warsaw\'s story is remarkable—almost completely destroyed during World War II, the city has been meticulously rebuilt, and you can see this contrast between historical architecture and contemporary design.</p>
+            '<p>I recently spent some time in <strong>Warsaw</strong>, the capital of Poland, and I have to say it exceeded my expectations. The city has an incredible blend of history, modernity, and culture, making it a fascinating place to explore. Warsaw\'s story is remarkable—almost completely destroyed during World War II, the city has been meticulously rebuilt, and you can see this contrast between historical architecture and contemporary design.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed in a lovely hotel in the heart of the city, near the <strong>Royal Route</strong>, which made it easy to explore many of Warsaw\'s key attractions. There are plenty of accommodation options, from budget-friendly hostels to luxurious five-star hotels, so it suits all types of travelers.</p>
             <p>Getting around Warsaw was very convenient. The city has an efficient <strong>metro system</strong>, as well as buses and trams. I often used the metro to get around quickly, especially since some of the main attractions are spread out across the city.</p>
@@ -192,8 +185,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Ever heard of this place? Where is it.',
             'location' => 'Gdańsk - Pologne<',
             'content' => 
-            '<h1>Gdańsk - Pologne</h1>
-            <p>I had the pleasure of visiting <strong>Gdańsk</strong>, a stunning city on the Baltic Sea in northern Poland, and it quickly became one of my favorite places. Gdańsk is a city with deep historical significance, known for its role in World War II and its pivotal role in the Solidarity movement. The charming medieval architecture mixed with colorful buildings lining the <strong>Motława River</strong> made for a picturesque backdrop throughout my visit.</p>
+            '<p>I had the pleasure of visiting <strong>Gdańsk</strong>, a stunning city on the Baltic Sea in northern Poland, and it quickly became one of my favorite places. Gdańsk is a city with deep historical significance, known for its role in World War II and its pivotal role in the Solidarity movement. The charming medieval architecture mixed with colorful buildings lining the <strong>Motława River</strong> made for a picturesque backdrop throughout my visit.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed in a cozy boutique hotel in the <strong>Old Town</strong>, just a short walk from the main attractions. Gdańsk offers a variety of accommodations, from charming guesthouses to more luxurious hotels, all within walking distance of the city\'s key spots.</p>
             <p>Getting around the city is easy, as it\'s quite walkable. I also used the local <strong>trams</strong> to explore areas a bit further from the Old Town, and I found the public transport system very convenient. Additionally, the city has a lovely atmosphere with lots of pedestrian-only areas, making it a joy to explore on foot.</p>
@@ -213,8 +205,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'The city and its secret location.',
             'location' => 'Dublin - Ireland',
             'content' => 
-            '<h1>Dublin - Ireland</h1>
-            <p>I recently had the chance to explore <strong>Dublin</strong>, the vibrant capital of Ireland, and it was such a fantastic experience! The city has a perfect blend of rich history, lively culture, and a welcoming atmosphere. Dublin may be modern in many ways, but it proudly holds onto its heritage, with historical landmarks scattered throughout the city.</p>
+            '<p>I recently had the chance to explore <strong>Dublin</strong>, the vibrant capital of Ireland, and it was such a fantastic experience! The city has a perfect blend of rich history, lively culture, and a welcoming atmosphere. Dublin may be modern in many ways, but it proudly holds onto its heritage, with historical landmarks scattered throughout the city.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed in a charming hotel just a short walk from <strong>Temple Bar</strong>, Dublin\'s famous cultural quarter. There are plenty of accommodation options in the city, from cozy guesthouses to chic boutique hotels and even luxurious five-star stays. No matter where you choose to stay, you\'ll find Dublin\'s warm hospitality shines through.</p>
             <p>Getting around Dublin was easy, with its extensive bus and tram network (<strong>Luas</strong>) and plenty of bike rental stations around the city. I loved walking, though, as Dublin is quite compact and pedestrian-friendly. Most of the major attractions are within walking distance, so I spent most of my time strolling through the lively streets.</p>
@@ -235,8 +226,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Where’s the heart of Northern Ireland?',
             'location' => 'Belfast - Ireland',
             'content' => 
-            '<h1><h1>Belfast - Ireland</h1>
-            <p>I recently had the pleasure of visiting <strong>Belfast</strong>, the capital of Northern Ireland, and I was blown away by how much the city has to offer. Belfast has a fascinating history, once known for its shipbuilding industry (where the Titanic was famously built), and today, it’s a city that blends rich heritage with a vibrant, modern atmosphere.</p>
+            '<p>I recently had the pleasure of visiting <strong>Belfast</strong>, the capital of Northern Ireland, and I was blown away by how much the city has to offer. Belfast has a fascinating history, once known for its shipbuilding industry (where the Titanic was famously built), and today, it’s a city that blends rich heritage with a vibrant, modern atmosphere.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed in a lovely hotel near the city center, making it easy to explore. Belfast has a great range of accommodations, from budget hostels to stylish boutique hotels, so you’ll find something that suits your taste and budget.</p>
             <p>Getting around the city was super easy. I mainly walked, as many of the major attractions are within walking distance, but the public transport system, including buses and the local train network, makes it convenient to travel to other parts of the city and beyond.</p>
@@ -257,8 +247,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Have you ever wondered where it is? Let´s find out',
             'location' => 'Galway - Ireland',
             'content' => 
-            '<h1>Galway - Ireland</h1>
-            <p>I recently visited <strong>Galway</strong>, a lively and charming city on the west coast of Ireland, and it quickly became one of my favorite destinations. Known for its vibrant arts scene, historic streets, and beautiful landscapes, Galway has a relaxed yet energetic vibe that makes it an unforgettable place to explore.</p>
+            '<p>I recently visited <strong>Galway</strong>, a lively and charming city on the west coast of Ireland, and it quickly became one of my favorite destinations. Known for its vibrant arts scene, historic streets, and beautiful landscapes, Galway has a relaxed yet energetic vibe that makes it an unforgettable place to explore.</p>
             <h2>Where to Stay & Getting Around</h2>
             <p>I stayed in a cozy guesthouse near the city center, which gave me easy access to all the sights. Galway has a variety of accommodations, from charming bed-and-breakfasts to boutique hotels and even some luxury options, making it suitable for any type of traveler.</p>
             <p>Getting around Galway was easy, as the city is small and pedestrian-friendly. I spent most of my time walking through the colorful streets, enjoying the buskers, street performers, and the local atmosphere. The city also has a great bus system if you want to venture a bit further out.</p>
