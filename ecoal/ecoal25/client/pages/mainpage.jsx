@@ -26,8 +26,8 @@ export const MainPage = () => {
 
   const filteredTrips = trips.filter(trip =>
     trip.title.toLowerCase().includes(search.toLowerCase()) ||
-    (trip.tags && Array.isArray(trip.tags) && trip.tags.some(tag => 
-      typeof tag === 'string' ? tag.toLowerCase().includes(search.toLowerCase()) 
+    (trip.tags && Array.isArray(trip.tags) && trip.tags.some(tag =>
+      typeof tag === 'string' ? tag.toLowerCase().includes(search.toLowerCase())
       : tag.name.toLowerCase().includes(search.toLowerCase())
     ))
   );
@@ -43,32 +43,35 @@ export const MainPage = () => {
                   className="w-full h-full object-cover opacity-90"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center w-full px-4">
-                  <h1 className="text-2xl text-[#090920] font-bold">Love Travelling?</h1>
-                  <i><h2 className="font-bold text-4xl text-[#090920]">You're at the right place.</h2></i>
+                  <h1 className="text-2xl text-[#090920] font-bold">From AnyTrip</h1>
+                  <i><h2 className="font-bold text-4xl text-[#090920]">To Any Trip.</h2></i>
               </div>
           </div>
-          <div className="bg-[#ffffff] min-h-screen p-4 text-[#131373] flex flex-col items-center">
-          <header className="w-full flex justify-between items-center py-4 border-b border-[#851515]">
-            <h1 className="text-xl font-bold">Welcome to AnyTrip!</h1>
-          </header>
+          {/* Rounded Container Spanning Full Width */}
+          <div className="relative w-full bg-white p-2 rounded-t-3xl shadow-2xl shadow-gray-500/50 -top-16">
+              <div className="bg-[#ffffff] min-h-screen p-4 text-[#131373] flex flex-col items-center">
+                  <header className="w-full flex justify-between items-center py-4 border-b border-[#851515]">
+                      <h1 className="text-xl font-bold">Welcome to AnyTrip!</h1>
+                  </header>
 
-          <div className="w-full my-4">
-            <input
-              type="text"
-              placeholder="Search trips by title or tags..."
-              className="w-full p-2 border border-[#851515] rounded-lg"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
+                  <div className="w-full my-4">
+                      <input
+                          type="text"
+                          placeholder="Search trips by title or tags..."
+                          className="w-full p-2 border border-[#851515] rounded-lg"
+                          value={search}
+                          onChange={(e) => setSearch(e.target.value)}
+                      />
+                  </div>
 
-          <div className="w-full flex flex-col gap-4">
-            {filteredTrips.map((trip) => (
-              <Postcard key={trip.id} trip={trip} onClick={() => navigate(`/article/${trip.id}`, { state: { trip } })} />
-            ))}
+                  <div className="w-full flex flex-col gap-4">
+                      {filteredTrips.map((trip) => (
+                          <Postcard key={trip.id} trip={trip} onClick={() => navigate(`/article/${trip.id}`, { state: { trip } })} />
+                      ))}
+                  </div>
+              </div>
           </div>
           <Footer />
-        </div>
     </>
   );
 };
