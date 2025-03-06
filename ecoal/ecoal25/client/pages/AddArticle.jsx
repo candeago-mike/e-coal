@@ -66,7 +66,7 @@ export const AddArticle = () => {
                     ></div>
 
                     <div className="px-2">
-                        <h2 className="text-2xl font-bold text-center mb-10 mt-2">
+                        <h2 className="text-2xl font-bold text-center text-[#851515] mb-10 mt-2">
                             Share A Digital Postcard With The World!
                         </h2>
                         <form

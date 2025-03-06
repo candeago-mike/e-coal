@@ -27,8 +27,8 @@ export const MainPage = () => {
     //     }
     // }
 
-  
-    
+
+
     // Toggle text with fade-out and fade-in effect
     useEffect(() => {
         const interval = setInterval(() => {
@@ -75,7 +75,7 @@ export const MainPage = () => {
             (trip.location &&
                 trip.location.toLowerCase().includes(search.toLowerCase()))
     );
-    
+
     return (
         <>
             <Header />
@@ -110,7 +110,7 @@ export const MainPage = () => {
                             Welcome to AnyTrip!
                         </h1>
                         {getAccessToken() ? (
-                            <NavLink to={"/addarticle"}>Add Article</NavLink>
+                            <NavLink to={"/addarticle"} className="text-[#851515]"><b>Add Article</b></NavLink>
                         ) : (
                             null
                         )}
