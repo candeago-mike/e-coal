@@ -1,6 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 import {Header} from "../src/shared/Header.jsx";
+import {Footer} from "../src/shared/Footer.jsx";
 
 export const About = () => {
     return (
@@ -54,9 +55,7 @@ export const About = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-center text-[#090920] text-xs mb-20">
-                &copy;2025 AnyTrip Corp. All rights reserved.
-            </p>
+            <Footer />
         </>
     )
 }

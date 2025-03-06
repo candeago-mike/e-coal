@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Header } from "../src/shared/Header";
+import { Footer } from "../src/shared/Footer";
 import { Postcard } from "../src/shared/postcard";
 import axios from "axios";
 
@@ -54,9 +55,7 @@ export const MainPage = () => {
               <Postcard key={trip.id} trip={trip} onClick={() => navigate(`/article/${trip.id}`, { state: { trip } })} />
             ))}
           </div>
-          <footer className="w-full mt-6 py-4 border-t border-[#851515] text-center">
-            <NavLink to="/about" className="text-[#851515] font-semibold">About</NavLink>
-          </footer>
+          <Footer />
         </div>
       </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { GoBack } from "./back";
 import { Header } from "./Header.jsx";
+import {Footer} from "./Footer.jsx";
 
 export const ArticlePage = () => {
     const location = useLocation();
@@ -49,10 +50,7 @@ export const ArticlePage = () => {
                 <p className="text-sm text-gray-600 mt-4 text-center">Published: {trip.created_at}</p>
                 <p className="text-sm text-gray-600 text-center">Location: {trip.location}</p>
             </div>
-
-            <p className="text-center text-[#090920] text-xs mt-4 mb-20">
-                &copy;2025 AnyTrip Corp. All rights reserved.
-            </p>
+            <Footer />
         </>
     );
 };
