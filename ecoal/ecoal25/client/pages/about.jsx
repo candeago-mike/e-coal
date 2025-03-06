@@ -12,7 +12,7 @@ export const About = () => {
                 <img
                     src="src/images/AboutUs.jpg"
                     alt="Team AnyTrip"
-                    className="w-full h-full object-cover opacity-70"
+                    className="w-full h-full object-cover opacity-75"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center w-full px-4">
                     <h1 className="text-2xl text-[#090920] font-bold">ABOUT US</h1>

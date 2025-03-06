@@ -15,7 +15,6 @@ export const ArticlePage = () => {
     return (
         <>
             <Header />
-
             {/* Top Section with Image */}
             <div className="relative w-full h-[500px]">
                 {trip.mediaURL && (

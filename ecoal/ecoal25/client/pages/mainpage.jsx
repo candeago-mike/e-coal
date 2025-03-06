@@ -33,11 +33,22 @@ export const MainPage = () => {
 
   return (
       <>
-        <Header />
-        <div className="bg-[#ffffff] min-h-screen p-4 text-[#131373] flex flex-col items-center">
+          <Header />
+          {/* Top Section with Image */}
+          <div className="relative w-full h-[500px]">
+              <img
+                  src="src/images/MainPage.jpg"
+                  alt="Team AnyTrip"
+                  className="w-full h-full object-cover opacity-90"
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center w-full px-4">
+                  <h1 className="text-2xl text-[#090920] font-bold">Love Travelling?</h1>
+                  <i><h2 className="font-bold text-4xl text-[#090920]">You're at the right place.</h2></i>
+              </div>
+          </div>
+          <div className="bg-[#ffffff] min-h-screen p-4 text-[#131373] flex flex-col items-center">
           <header className="w-full flex justify-between items-center py-4 border-b border-[#851515]">
             <h1 className="text-xl font-bold">Welcome to AnyTrip!</h1>
-            <NavLink to="/" className="text-[#851515] font-semibold">Logout</NavLink>
           </header>
 
           <div className="w-full my-4">
