@@ -38,7 +38,7 @@ export const MainPage = () => {
         return getCookieValue("accessToken") != undefined;
     };
 
-    
+
     // Toggle text with fade-out and fade-in effect
     useEffect(() => {
         const interval = setInterval(() => {
@@ -120,7 +120,7 @@ export const MainPage = () => {
                             Welcome to AnyTrip!
                         </h1>
                         {getAccessToken ? (
-                            <NavLink to={"/addarticle"}>Add Article</NavLink>
+                            <NavLink to={"/addarticle"} className="text-[#851515]"><b>Add Article</b></NavLink>
                         ) : (
                             null
                         )}
