@@ -63,7 +63,7 @@ export const About = () => {
 
                     <div className="flex flex-col items-center">
                         <NavLink to={"/anytrip"}>
-                            <button className="bg-[#851515] mt-10 text-white p-3 rounded-lg hover:bg-[#6a0f0f] w-full max-w-70 mb-2 mt-2">
+                            <button className="bg-[#851515] mt-10 text-white p-3 rounded-lg hover:bg-[#6a0f0f] w-full max-w-70 mb-2">
                                 Try it - it's free.
                             </button>
                         </NavLink>
