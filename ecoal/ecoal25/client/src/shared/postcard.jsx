@@ -3,6 +3,7 @@ import postcard from "./../assets/postage-stamp.png";
 
 export const Postcard = ({ trip, onClick }) => {
     return (
+        <>
         <div
             className="w-full p-4 bg-white border-4 border-dashed border-red-600 rounded-lg shadow-lg cursor-pointer flex justify-between items-center"
             onClick={onClick}
@@ -25,5 +26,6 @@ export const Postcard = ({ trip, onClick }) => {
                 />
             </div>
         </div>
+        </>
     );
 };
