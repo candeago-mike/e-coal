@@ -29,7 +29,8 @@ export const MainPage = () => {
     (trip.tags && Array.isArray(trip.tags) && trip.tags.some(tag =>
       typeof tag === 'string' ? tag.toLowerCase().includes(search.toLowerCase())
       : tag.name.toLowerCase().includes(search.toLowerCase())
-    ))
+    )) ||
+    (trip.location && trip.location.toLowerCase().includes(search.toLowerCase()))
   );
 
   return (
