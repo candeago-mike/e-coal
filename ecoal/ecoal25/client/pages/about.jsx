@@ -12,7 +12,7 @@ export const About = () => {
                 <img
                     src="src/images/AboutUs.jpg"
                     alt="Team AnyTrip"
-                    className="w-full h-full object-cover opacity-75"
+                    className="w-full h-full object-cover opacity-65"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center w-full px-4">
                     <h1 className="text-2xl text-[#090920] font-bold">ABOUT US</h1>
@@ -49,15 +49,22 @@ export const About = () => {
                         <p className="text-justify text-[#090920] mb-4">
                             As part of our Erasmus project, we created AnyTrip, a mobile app designed to make travel planning easier, faster, and more personal.
                         </p>
-                        <p className="text-justify text-[#090920]">
+                        <p className="text-justify text-[#090920] mb-10">
                             Join us on AnyTrip and let’s make travel planning effortless and inspiring—one trip at a time!
                         </p>
+                        <div className="flex flex-col items-center">
+                        <img
+                            src="src/images/GroupPic.jpeg"
+                            alt="Team AnyTrip"
+                            className="w-full object-cover"
+                        />
+                        </div>
                     </div>
 
                     <div className="flex flex-col items-center">
                         <NavLink to={"/anytrip"}>
                             <button className="bg-[#851515] mt-10 text-white p-3 rounded-lg hover:bg-[#6a0f0f] w-full max-w-70 mb-2 mt-2">
-                                Read More
+                                Try it - it's free.
                             </button>
                         </NavLink>
 

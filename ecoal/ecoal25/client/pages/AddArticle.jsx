@@ -12,7 +12,7 @@ export const AddArticle = () => {
     const [imageFile, setImageFile] = useState(null);
     const [mediaType, setMediaType] = useState("");
     const [mediaURL, setMediaURL] = useState("");
-    const [leadStory, setLeadStory] = useState(false); 
+    const [leadStory, setLeadStory] = useState(false);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -23,10 +23,10 @@ export const AddArticle = () => {
         formData.append("content", content);
         formData.append("mediaType", mediaType);
         formData.append("mediaURL", mediaURL);
-        formData.append("leadStory", leadStory ? "1" : "0"); 
+        formData.append("leadStory", leadStory ? "1" : "0");
 
         if (imageFile) {
-            formData.append("thumbnailURL", imageFile); 
+            formData.append("thumbnailURL", imageFile);
         } else {
             formData.append("thumbnailURL", imageURL);
         }
@@ -49,9 +49,9 @@ export const AddArticle = () => {
         <>
             <Header />
             {/* Top Section with Image */}
-            <div className="relative w-full h-[400px]">
+            <div className="relative w-full h-[500px]">
                 <img
-                    src="/src/images/AboutUs.jpg"
+                    src="/src/images/AddArticle.jpg"
                     alt="Team AnyTrip"
                     className="w-full h-full object-cover opacity-70"
                 />
