@@ -10,7 +10,7 @@ export const MainPage = () => {
     const [search, setSearch] = useState("");
     const navigate = useNavigate();
     const [trips, setTrips] = useState([]);
-    const [tripText, setTripText] = useState("To Any Trip.");
+    const [tripText, setTripText] = useState("Any");
     const [isVisible, setIsVisible] = useState(true); // Controls fade effect
 
     // const [username, setUsername] = useState("");
@@ -34,9 +34,9 @@ export const MainPage = () => {
             setIsVisible(false); // Start fade-out
             setTimeout(() => {
                 setTripText((prevText) =>
-                    prevText === "To Any Trip."
-                        ? "To Every Trip."
-                        : "To Any Trip."
+                    prevText === "Any"
+                        ? "Every"
+                        : "Any"
                 );
                 setIsVisible(true); // Start fade-in
             }, 500); // Wait for fade-out before changing text
@@ -89,19 +89,23 @@ export const MainPage = () => {
                     <h1 className="text-2xl text-[#090920] font-bold">
                         From AnyTrip
                     </h1>
-                    <i>
-                        <h2
-                            className={`font-bold text-4xl text-[#090920] transition-opacity duration-500 ${
-                                isVisible ? "opacity-100" : "opacity-0"
-                            }`}
-                        >
-                            <span>To </span>
-                            <span className="text-[#851515]">
-                                {tripText.split(' ')[1]}
-                            </span>
-                            <span> Trip.</span>
-                        </h2>
-                    </i>
+                    <div className="flex font-bold text-4xl">
+                        <div>
+                            <h2>To&nbsp;</h2>
+                        </div>
+                        <div>
+                            <h2
+                                className={`text-[#851515] transition-opacity duration-500 ${
+                                    isVisible ? "opacity-100" : "opacity-0"
+                                }`}
+                            >
+                                {tripText}
+                            </h2>
+                        </div>
+                        <div>
+                            <h2>&nbsp;Trip.</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
 
