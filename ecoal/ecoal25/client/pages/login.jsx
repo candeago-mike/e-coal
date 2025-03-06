@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom"; 
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
 export const Login = () => {
-    const [cookies, setCookie , removeCookie] = useCookies(["accessToken"]); 
-    const navigate = useNavigate(); 
+    const [cookies, setCookie , removeCookie] = useCookies(["accessToken"]);
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
 
     async function handleLogin(event) {
@@ -23,7 +23,7 @@ export const Login = () => {
                 { email, password },
                 { headers: { "Content-Type": "application/json" } }
             );
-            
+
             if (loginResponse.status === 200) {
                 const token = loginResponse.data.access_token;
                 console.log(token)
@@ -33,11 +33,11 @@ export const Login = () => {
                 console.log( loginResponse.data.token)
 
                 if (usersResponse.status === 200) {
-                    const users = usersResponse.data; 
+                    const users = usersResponse.data;
                     console.log(users)
                     const user = users.find(user => user.email === email);
                     if (user) {
-                        setCookie("accessToken", token, { path: "/", maxAge: 3600 }); 
+                        setCookie("accessToken", token, { path: "/", maxAge: 3600 });
 
                         alert(`Welcome, ${user.name}!`);
                         navigate("/anytrip");
@@ -62,8 +62,10 @@ export const Login = () => {
         <div className="h-screen w-screen flex items-center justify-center bg-[#E8D1C1]">
             <div className="w-full max-w-xs">
                 <form onSubmit={handleLogin} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                    <h2 className="text-2xl font-bold text-center text-[#090920] mt-2 mb-4">Login</h2>
-
+                    <img
+                        src="/src/images/LogoBlack.png"
+                        alt="AnyTrip" className="mb-8 mt-4"
+                    />
                     <div className="mb-4">
                         <label className="block text-[#090920] text-sm font-bold mb-2" htmlFor="email">
                             Email
@@ -71,7 +73,7 @@ export const Login = () => {
                         <input
                             className="shadow appearance-none border border-[#C7AE96] rounded w-full py-2 px-3 text-[#090920] leading-tight focus:outline-none focus:ring-1 focus:ring-[#851515]"
                             id="email"
-                            name="email" 
+                            name="email"
                             type="email"
                             placeholder="Email"
                             required
@@ -85,7 +87,7 @@ export const Login = () => {
                         <input
                             className="shadow appearance-none border border-[#C7AE96] rounded w-full py-2 px-3 text-[#090920] leading-tight focus:outline-none focus:ring-1 focus:ring-[#851515]"
                             id="password"
-                            name="password" 
+                            name="password"
                             type="password"
                             placeholder="******"
                             required
@@ -94,9 +96,9 @@ export const Login = () => {
 
                     <div className="flex justify-center">
                         <button
-                            className="bg-[#131373] hover:bg-[#090920] text-white font-bold py-2 px-6 mt-2 rounded"
+                            className="bg-[#131373] hover:bg-[#090920] p-3 rounded-lg text-white font-bold py-2 px-6 mt-2 w-full mb-4"
                             type="submit"
-                            disabled={loading} 
+                            disabled={loading}
                         >
                             {loading ? "Logging in..." : "Login"}
                         </button>
