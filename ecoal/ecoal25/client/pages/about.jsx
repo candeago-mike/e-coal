@@ -42,7 +42,7 @@ export const About = () => {
 
                     {/* Text Content */}
                     <div className="px-8">
-                        <strong><p className="text-xl text-[#090920] mb-4">A Postcard From AnyTrip</p></strong>
+                        <strong><p className="text-xl text-[#131373] mb-4">A Postcard From AnyTrip</p></strong>
                         <p className="text-justify text-[#090920] mb-4">
                             We are Carlos, Cheryl, Clea, Mike, Hanna, and Fabio – a group of travel enthusiasts from different corners of the world, united by our passion for discovering new places and sharing our experiences.
                         </p>
@@ -53,6 +53,16 @@ export const About = () => {
                             Join us on AnyTrip and let’s make travel planning effortless and inspiring—one trip at a time!
                         </p>
                     </div>
+
+                    <div className="flex flex-col items-center">
+                        <NavLink to={"/anytrip"}>
+                            <button className="bg-[#851515] mt-10 text-white p-3 rounded-lg hover:bg-[#6a0f0f] w-full max-w-70 mb-2 mt-2">
+                                Read More
+                            </button>
+                        </NavLink>
+
+                    </div>
+
                 </div>
             </div>
             <Footer />
