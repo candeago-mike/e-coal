@@ -11,6 +11,7 @@ import ProtectedRoute from "./shared/protectedRoute.jsx";
 import { AddArticle } from "../pages/addArticle.jsx";
 import { ErrorPage } from "../pages/errorPage";
 
+
 export function getCookieValue(name) {
     const regex = new RegExp(`(^| )${name}=([^;]+)`);
     const match = document.cookie.match(regex);
@@ -43,8 +44,8 @@ ReactDOM.createRoot(root).render(
                 <Route path="/article/:id" element={<ArticlePage />} />
                 {/* ) : null} */}
                 {isAuthenticated() ? (
-                <Route path="/addarticle" element={<AddArticle />} />
-                 ) : null} 
+                    <Route path="/addarticle" element={<AddArticle />} />
+                ) : null}
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
