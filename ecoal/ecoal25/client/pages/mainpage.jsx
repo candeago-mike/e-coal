@@ -77,7 +77,7 @@ export const MainPage = () => {
                 <div className="bg-[#ffffff] min-h-screen p-4 text-[#131373] flex flex-col items-center">
                     <header className="w-full flex justify-between items-center py-4 border-b border-[#851515]">
                         <h1 className="text-xl font-bold">Welcome to AnyTrip!</h1>
-                        <NavLink to={"/addarticle"} />
+                        <NavLink to={"/addarticle"} className="text-[#851515] text-lg underline"><b>Add Article</b></NavLink>
                     </header>
 
                     <div className="w-full my-4">
@@ -95,6 +95,7 @@ export const MainPage = () => {
                             <Postcard key={trip.id} trip={trip} onClick={() => navigate(`/article/${trip.id}`, { state: { trip } })} />
                         ))}
                     </div>
+                    <div className="mb-20"></div>
                 </div>
             </div>
             <Footer />

@@ -48,6 +48,7 @@ export const ArticlePage = () => {
 
                 <p className="text-sm text-gray-600 mt-4 text-center">Published: {trip.created_at}</p>
                 <p className="text-sm text-gray-600 text-center">Location: {trip.location}</p>
+                <div className="mb-20"></div>
             </div>
             <Footer />
         </>
