@@ -34,9 +34,7 @@ export const MainPage = () => {
             setIsVisible(false); // Start fade-out
             setTimeout(() => {
                 setTripText((prevText) =>
-                    prevText === "Any"
-                        ? "Every"
-                        : "Any"
+                    prevText === "Any" ? "Every" : "Any"
                 );
                 setIsVisible(true); // Start fade-in
             }, 500); // Wait for fade-out before changing text
@@ -117,10 +115,13 @@ export const MainPage = () => {
                             Welcome to AnyTrip!
                         </h1>
                         {getAccessToken() ? (
-                            <NavLink to={"/addarticle"} className="text-[#851515]"><b>Add Article</b></NavLink>
-                        ) : (
-                            null
-                        )}
+                            <NavLink
+                                to={"/addarticle"}
+                                className="text-[#851515]"
+                            >
+                                <b>Add Article</b>
+                            </NavLink>
+                        ) : null}
                     </header>
 
                     <div className="w-full my-4">
