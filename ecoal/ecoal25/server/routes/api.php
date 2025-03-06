@@ -39,6 +39,7 @@ Route::group([
             'mediaType',
             'mediaURL',
             'leadStory',
+            'location',
         ));
     });
     Route::get('/logout',  [AuthController::class, 'logout']);
