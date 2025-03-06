@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $article = Article::create([
-            'title' => 'Find out where Lens is located',
+            'title' => 'My Unforgettable Journey to Lens',
             'location' => 'Lens - France',
             'content' => 
             '<h1>Lens - France</h1>
@@ -37,9 +37,9 @@ class DatabaseSeeder extends Seeder
             <p>Food in Lens is hearty and delicious. I tried carbonnade flamande, a rich beef stew cooked with beer, and the famous welsh rarebit, which is basically melted cheese heaven! To finish, a slice of tarte au sucre (sugar tart) is a must.</p>
             <p>Lens may not be the most famous French city, but it has a unique charm, a rich history, and some truly unforgettable spots. Definitely worth a visit!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Lens2.jpg',
             'mediaType' => 'image',
-            'mediaURL' => '/src/images/Lens1.jpg',
+            'mediaURL' => '/src/images/Lens2.jpg',
             'leadStory' => false
         ]);
 
@@ -57,9 +57,9 @@ class DatabaseSeeder extends Seeder
             <p>The food in Annecy is a dream, especially if you love cheese! I tried tartiflette, a baked dish with potatoes, reblochon cheese, bacon, and onions—pure comfort food. Another must-try is raclette, where melted cheese is scraped onto potatoes and charcuterie. For dessert, I couldn’t resist a savoyard blueberry tart—simple but delicious.</p>
             <p>Annecy completely stole my heart. Whether you\'re into history, nature, or just enjoying good food with a view, this place is absolutely worth a visit!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Annecy1.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Annecy1.jpg',
             'leadStory' => false
         ]);
 
@@ -77,15 +77,15 @@ class DatabaseSeeder extends Seeder
             <p>Toulouse is a food lover’s paradise. I had to try <strong>cassoulet</strong>, a rich and hearty dish made with white beans, duck confit, and sausage—comfort food at its best! Another regional specialty is <strong>foie gras</strong>, often served with toast and fig chutney. For dessert, I tasted <strong>Fénétra</strong>, a delicious tart made with almonds and apricots.</p>
             <p>Toulouse has an irresistible charm, mixing history, culture, and an easygoing lifestyle. Whether you’re exploring its vibrant streets or indulging in local cuisine, it’s a city that’s hard not to fall in love with!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Toulouse1.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Toulouse1.jpg',
             'leadStory' => false
         ]);
 
 
         $article = Article::create([
-            'title' => 'A hidden gem on North of Portugal but where is it?',
+            'title' => 'I found the hidden gem on North of Portugal.',
             'location' => 'Vila Nova de Gaia - Portugal',
             'content' => 
             '<h1>Vila Nova de Gaia - Portugal</h1>
@@ -99,14 +99,14 @@ class DatabaseSeeder extends Seeder
             <p>Gaia has incredible food, deeply connected to Porto’s culinary traditions. I couldn’t resist trying a <strong>Francesinha</strong>, a hearty sandwich filled with cured meats, covered in melted cheese, and topped with a rich beer-based sauce. Another must-try is <strong>Bacalhau à Brás</strong>, a delicious dish made with shredded codfish, eggs, and potatoes. To pair with a glass of port wine, <strong>Pastel de Nata</strong> (custard tart) is always a perfect choice.</p>
             <p>Vila Nova de Gaia is more than just a place for wine lovers—it’s a city full of culture, history, and unforgettable views. Whether you’re sipping a glass of port or watching the sunset over the Douro, it’s a destination that stays with you long after you leave!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/VNG1.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/VNG1.jpg',
             'leadStory' => false
         ]);
 
         $article = Article::create([
-            'title' => 'Guess where it is located?',
+            'title' => 'Like Fish?? This city you must visit.',
             'location' => 'Póvoa de Varzim - Portugal',
             'content' => '<h1>Póvoa de Varzim - Portugal</h1>
             <p>I recently visited <strong>Póvoa de Varzim</strong>, a charming coastal city in northern Portugal, known for its stunning beaches, rich history, and delicious seafood. Located just 30 minutes from Porto, this vibrant town is perfect for a relaxing getaway by the Atlantic Ocean.</p>
@@ -118,15 +118,15 @@ class DatabaseSeeder extends Seeder
             <p>Being a coastal town, seafood is the star of Póvoa’s cuisine. I had an amazing <strong>Arroz de Marisco</strong>, a rich seafood rice dish packed with shrimp, clams, and crab. Another must-try is <strong>Robalo grelhado (grilled sea bass)</strong>, which is incredibly fresh and flavorful. For dessert, I enjoyed <strong>Clarinhas de Fão</strong>, sweet pastries filled with pumpkin jam, which are a local favorite.</p>
             <p>Póvoa de Varzim has a special charm, with its mix of stunning beaches, cultural sites, and delicious food. Whether you\'re looking for relaxation or adventure, this city is definitely worth visiting!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Povoa1.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Povoa1.jpg',
             'leadStory' => false
         ]);
 
 
         $article = Article::create([
-            'title' => 'Uncovering its hystorical location',
+            'title' => 'The city that will surprise you.',
             'location' => 'Sines - Portugal',
             'content' => 
             '<h1>Sines - Portugal</h1>
@@ -139,9 +139,9 @@ class DatabaseSeeder extends Seeder
             <p>Sines is a paradise for seafood lovers! I tried <strong>Açorda de Marisco</strong>, a traditional bread-based seafood stew that was rich and full of flavor. Another specialty is <strong>Choco Frito (fried cuttlefish)</strong>, crispy on the outside and tender inside, usually served with a side of fries. To finish, <strong>Sericaia</strong>, a delicious Alentejo-style egg pudding with cinnamon, was the perfect sweet treat.</p>
             <p>Sines is a fantastic destination for anyone looking to experience authentic Portuguese coastal life, with its mix of history, stunning landscapes, and incredible food. Whether you\'re exploring the castle or relaxing by the sea, this town has something special to offer!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Sines1.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Sines1.jpg',
             'leadStory' => false
         ]);
 
@@ -160,14 +160,14 @@ class DatabaseSeeder extends Seeder
             <p>When it comes to food, I couldn’t get enough of the local Polish cuisine. I tried <strong>pierogi</strong> (dumplings), <strong>kielbasa</strong> (sausage), and <strong>bigos</strong> (hunter\'s stew), which were delicious and hearty, perfect for refueling after a day of exploring.</p>
             <p>If you’re visiting Poland, Łódź is definitely a city worth experiencing!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Łódź1.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Łódź1.jpg', 
             'leadStory' => false
         ]);
 
         $article = Article::create([
-            'title' => 'Where in the world is Warsaw?',
+            'title' => 'The city that i never thought i would visit.',
             'location' => 'Warsaw - Pologne',
             'content' => 
             '<h1>Warsaw - Pologne</h1>
@@ -182,9 +182,9 @@ class DatabaseSeeder extends Seeder
             <p>Warsaw offers a mix of traditional Polish dishes and international cuisine. I tried <strong>pierogi</strong>, of course, along with delicious <strong>placki ziemniaczane</strong> (potato pancakes) and a hearty bowl of <strong>żurek</strong> (sour rye soup). The city’s cafes are also perfect for grabbing a coffee and watching the world go by.</p>
             <p>Warsaw truly has something for everyone—whether you\'re a history buff, a foodie, or someone who just enjoys strolling through beautiful streets. It’s a city that’s both historic and dynamic, and I’d highly recommend visiting!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Warszawa3.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Warszawa3.jpg', 
             'leadStory' => false
         ]);
 
@@ -203,9 +203,9 @@ class DatabaseSeeder extends Seeder
             <p>When it comes to food, Gdańsk has a great selection of seafood. I indulged in fresh fish and, of course, tried the local specialty, a hearty bowl of <strong>żurek</strong>. There are also plenty of cozy cafes where you can enjoy a warm drink and relax after a day of sightseeing.</p>
             <p>Gdańsk is a perfect mix of history, culture, and natural beauty. It’s a place that offers a little bit of everything and has a welcoming, laid-back vibe. If you’re ever in Poland, make sure Gdańsk is on your list—it’s a hidden gem!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Gdańsk2.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Gdańsk2.jpg', 
             'leadStory' => false
         ]);
 
@@ -225,9 +225,9 @@ class DatabaseSeeder extends Seeder
             <p>As for food, Dublin is a true delight for the senses. I had traditional Irish dishes like hearty stew, fresh seafood chowder, and, of course, fish and chips. The city also boasts a thriving food scene, with amazing cafés and pubs offering everything from artisanal pastries to mouthwatering Irish breakfasts.</p>
             <p>Dublin is an energetic, diverse city with something for everyone—whether you\'re into history, culture, or just enjoying a pint at a traditional pub. It’s a city full of stories, and I left already planning my next visit!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Dublin3.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Dublin3.jpg', 
             'leadStory' => false
         ]);
 
@@ -247,9 +247,9 @@ class DatabaseSeeder extends Seeder
             <p>When it comes to food, Belfast offers a great variety of local and international options. I had a fantastic traditional <strong>Ulster fry</strong> (a hearty Northern Irish breakfast) and some freshly caught seafood. The city also has plenty of trendy cafes, pubs, and restaurants where you can try both local and global dishes.</p>
             <p><strong>Belfast</strong> is a city that has reinvented itself in recent years, offering a unique mix of history, culture, and contemporary life. It’s a fascinating place to visit, and I left with so much appreciation for its resilience and vibrant energy. If you’re ever in Northern Ireland, <strong>Belfast</strong> is a must!</p>
             </p>',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Belfast2.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Belfast2.jpg',
             'leadStory' => false
         ]);
 
@@ -268,9 +268,9 @@ class DatabaseSeeder extends Seeder
             <p>As for food, Galway is a fantastic place for foodies. I tried some delicious seafood, including fresh oysters from the Galway Bay, and I couldn\'t resist trying a traditional Irish stew. The city is known for its lively pub scene, where you can enjoy a pint of Guinness and listen to live traditional Irish music.</p>
             <p>Overall, <strong>Galway</strong> is a city that blends culture, history, and nature effortlessly. Whether you’re strolling through its lively streets, enjoying a quiet moment by the sea, or indulging in some of the best food Ireland has to offer, Galway truly has something for everyone. It\'s a must-visit when in Ireland!</p>
             ',
-            'thumbnailURL' => 'ecoal2.jpg',
+            'thumbnailURL' => '/src/images/Galway2.jpg',
             'mediaType' => 'image',
-            'mediaURL' => 'ecoal.jpg',
+            'mediaURL' => '/src/images/Galway2.jpg',
             'leadStory' => false
         ]);
 
