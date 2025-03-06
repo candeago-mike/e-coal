@@ -5,12 +5,10 @@ import { Footer } from "../src/shared/Footer";
 import { Postcard } from "../src/shared/postcard";
 import axios from "axios";
 
-
 export const MainPage = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const [trips, setTrips] = useState([]);
-
 
   const fetchTrips = useCallback(async () => {
     try {
@@ -24,11 +22,14 @@ export const MainPage = () => {
 
   useEffect(() => {
     fetchTrips();
-  }, []);
+  }, [fetchTrips]);
 
   const filteredTrips = trips.filter(trip =>
     trip.title.toLowerCase().includes(search.toLowerCase()) ||
-    trip.location.toLowerCase().includes(search.toLowerCase())
+    (trip.tags && Array.isArray(trip.tags) && trip.tags.some(tag => 
+      typeof tag === 'string' ? tag.toLowerCase().includes(search.toLowerCase()) 
+      : tag.name.toLowerCase().includes(search.toLowerCase())
+    ))
   );
 
   return (
@@ -54,7 +55,7 @@ export const MainPage = () => {
           <div className="w-full my-4">
             <input
               type="text"
-              placeholder="Search trips..."
+              placeholder="Search trips by title or tags..."
               className="w-full p-2 border border-[#851515] rounded-lg"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -68,6 +69,6 @@ export const MainPage = () => {
           </div>
           <Footer />
         </div>
-      </>
+    </>
   );
 };

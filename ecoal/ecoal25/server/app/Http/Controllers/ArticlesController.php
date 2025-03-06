@@ -12,7 +12,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        return Article::all();
+        return Article::with('tags')->get();
     }
 
     /**

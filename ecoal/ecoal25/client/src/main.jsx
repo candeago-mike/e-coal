@@ -9,7 +9,7 @@ import { About } from "../pages/about.jsx";
 import { ArticlePage } from "../src/shared/articlePage";
 import ProtectedRoute from "./shared/protectedRoute.jsx";
 import { AddArticle } from "../pages/addArticle.jsx";
-
+import { ErrorPage } from "../pages/errorPage";
 function getCookieValue(name) {
     const regex = new RegExp(`(^| )${name}=([^;]+)`);
     const match = document.cookie.match(regex);
@@ -17,7 +17,6 @@ function getCookieValue(name) {
         return match[2];
     }
 }
-import { ErrorPage } from "../pages/errorPage";
 
 const root = document.getElementById("root");
 const getAccessToken = () => {
@@ -45,7 +44,7 @@ ReactDOM.createRoot(root).render(
                 {isAuthenticated() ? (
                     <Route path="/addarticle" element={<AddArticle />} />
                 ) : null}
-                <Route path="*" element={<Login />} />
+                <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
     </CookiesProvider>
