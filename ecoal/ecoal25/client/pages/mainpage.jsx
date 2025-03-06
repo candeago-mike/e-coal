@@ -17,7 +17,7 @@ export const MainPage = () => {
         const interval = setInterval(() => {
             setIsVisible(false); // Start fade-out
             setTimeout(() => {
-                setTripText((prevText) => (prevText === "To Any Trip." ? "To Every Trip." : "To Any Trip."));
+                setTripText((prevText) => (prevText === "To Any Trip." ? "For Every Trip." : "To Any Trip."));
                 setIsVisible(true); // Start fade-in
             }, 500); // Wait for fade-out before changing text
         }, 2000); // Runs every 2 seconds
