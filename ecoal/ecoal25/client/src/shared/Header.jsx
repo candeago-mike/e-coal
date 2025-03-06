@@ -9,7 +9,7 @@ export const Header = () => {
     return (
         <header className="w-full flex justify-between bg-[#090920] items-center py-4 text-[#E8D1C1] px-6">
             <NavLink
-                to="/anytrip"
+                to="/"
                 className="text-[#E8D1C1] font-semibold hover:text-[#ffffff]"
             >
                 <img
@@ -20,7 +20,7 @@ export const Header = () => {
             </NavLink>
             <nav className="flex gap-6">
                 <NavLink
-                    to="/anytrip"
+                    to="/"
                     className="text-[#E8D1C1] font-semibold hover:text-[#ffffff]"
                 >
                     Home
@@ -31,7 +31,7 @@ export const Header = () => {
                 >
                     About
                 </NavLink>
-                {getAccessToken() ? <Logout /> : <div><a href="/">Login</a></div>}
+                {getAccessToken() ? <Logout /> : <div><a href="/login">Login</a></div>}
             </nav>
         </header>
     );
