@@ -108,13 +108,14 @@ export const AddArticle = () => {
                                 className="p-3 border rounded-lg w-full h-40"
                                 required
                             ></textarea>
-                            <div className="flex justify-center">
+                            <div className="flex flex-col items-center">
                                 <button
                                     type="submit"
-                                    className="bg-[#851515] text-white p-3 rounded-lg hover:bg-[#6a0f0f] w-full max-w-70"
+                                    className="bg-[#851515] text-white p-3 rounded-lg hover:bg-[#6a0f0f] w-full max-w-70 mb-2 mt-2"
                                 >
                                     Submit Article
                                 </button>
+                                <NavLink to={"/anytrip"} className="text-[#851515] mt-3"><b>Cancel</b></NavLink>
                             </div>
 
                         </form>

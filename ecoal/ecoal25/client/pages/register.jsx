@@ -21,7 +21,7 @@ export const Register = () => {
                 { name: name, email: email, password: password },
                 { headers: { 'Content-Type': 'application/json', Accept: 'application/json' } }
             );
-            
+
             if (response.status == 200 ) {
                 alert("Registration successful");
                 window.location.href = "/";
@@ -44,10 +44,10 @@ export const Register = () => {
                     onSubmit={handleRegister}
                     className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
                 >
-                    <h2 className="text-2xl font-bold text-center text-[#090920] mt-2 mb-4">
-                        Register
-                    </h2>
-
+                    <img
+                        src="/src/images/LogoBlack.png"
+                        alt="AnyTrip" className="mb-8 mt-4"
+                    />
                     <div className="mb-4">
                         <label
                             className="block text-[#090920] text-sm font-bold mb-2"
@@ -61,7 +61,7 @@ export const Register = () => {
                             name="name"
                             type="text"
                             placeholder="Full Name"
-                            
+
                         />
                     </div>
 
@@ -78,7 +78,7 @@ export const Register = () => {
                             name="email"
                             type="email"
                             placeholder="Email"
-                           
+
                         />
                     </div>
 
@@ -118,7 +118,7 @@ export const Register = () => {
 
                     <div className="flex justify-center">
                         <button
-                            className="bg-[#131373] hover:bg-[#090920] text-white font-bold py-2 px-6 mt-2 rounded"
+                            className="bg-[#131373] hover:bg-[#090920] p-3 rounded-lg text-white font-bold py-2 px-6 mt-2 w-full mb-4"
                             type="submit"
                         >
                             Register
