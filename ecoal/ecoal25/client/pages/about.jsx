@@ -1,6 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 import {Header} from "../src/shared/Header.jsx";
+import {Footer} from "../src/shared/Footer.jsx";
 
 export const About = () => {
     return (
@@ -54,6 +55,7 @@ export const About = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
