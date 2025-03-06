@@ -25,7 +25,6 @@ Route::get('/articles', function () {
     return Article::all();
 });
 
-
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -43,12 +42,9 @@ Route::group([
         ));
     });
     Route::get('/logout',  [AuthController::class, 'logout']);
-
     Route::get('/user',  function (Request $request) {
         return $request->user();
     });
 });
-
-
 Route::apiResource("users", UsersController::class);
 Route::apiResource("articles", ArticlesController::class);

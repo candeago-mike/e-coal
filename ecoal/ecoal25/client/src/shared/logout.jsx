@@ -9,11 +9,7 @@ export const Logout = () => {
 
     async function handleLogout() {
         try {
-            if (!cookies.accessToken) {
-                alert("You are already logged out.");
-                return;
-            }
-           
+
             const response = await axios.get(
                 "http://localhost:8000/api/logout",
                 {
@@ -35,7 +31,7 @@ export const Logout = () => {
             alert("Error logging out. Please try again.");
         }
     }
-
+    
     return (
         <button
             onClick={handleLogout}
