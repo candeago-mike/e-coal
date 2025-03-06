@@ -52,7 +52,7 @@ export const MainPage = () => {
                 "http://localhost:8000/api/articles"
             );
             setTrips(response.data);
-            console.log(response.data);
+            // console.log(response.data);
         } catch (error) {
             console.error("Error fetching trips:", error);
         }

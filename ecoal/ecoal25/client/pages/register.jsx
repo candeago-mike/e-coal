@@ -30,7 +30,7 @@ export const Register = () => {
                 alert(errorData.error);
             }
         } catch (error) {
-            console.log("name",name, "email",email,"pass", password);
+            
             console.error("Server response:", error);
 
             alert("An error occurred during registration");

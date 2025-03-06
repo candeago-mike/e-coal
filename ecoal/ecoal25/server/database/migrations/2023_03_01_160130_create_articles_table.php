@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->string('thumbnailURL');
+            $table->string('thumbnailURL')->nullable();
             $table->string('mediaType')->nullable();
             $table->string('mediaURL')->nullable();
-            $table->boolean('leadStory');
+            $table->boolean('leadStory')->nullable();
             $table->string('location');
             $table->timestamps();
         });

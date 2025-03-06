@@ -4,7 +4,7 @@ import { useCookies } from "react-cookie";
 
 const ProtectedRoute = () => {
     const [cookies] = useCookies(["accessToken"]);
-    console.log("ici", cookies)
+    // console.log("ici", cookies)
     if (!cookies.accessToken) {
         return <Navigate to="/" replace />;
     }
