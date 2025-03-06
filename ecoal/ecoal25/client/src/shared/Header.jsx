@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import React from "react";
+import { Logout } from "./logout";
 
 export const Header = () => {
     return (
@@ -17,9 +18,7 @@ export const Header = () => {
                 <NavLink to="/about" className="text-[#E8D1C1] hover:text-[#ffffff] font-semibold">
                     About
                 </NavLink>
-                <NavLink to="/" className="text-[#E8D1C1] hover:text-[#ffffff] font-semibold">
-                    Logout
-                </NavLink>
+               <Logout/>
             </nav>
         </header>
     )

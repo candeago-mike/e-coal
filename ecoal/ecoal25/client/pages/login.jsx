@@ -4,7 +4,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 
 export const Login = () => {
-    const [cookies, setCookie] = useCookies(["user"]); 
+    const [cookies, setCookie , removeCookie] = useCookies(["accessToken"]); 
     const navigate = useNavigate(); 
     const [loading, setLoading] = useState(false);
 
