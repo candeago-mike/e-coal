@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Header } from "../src/shared/Header";
 import axios from "axios";
 
-import {Footer} from "../src/shared/Footer.jsx";
+import { Footer } from "../src/shared/Footer.jsx";
 export const AddArticle = () => {
     const [title, setTitle] = useState("");
     const [location, setLocation] = useState("");
@@ -12,7 +12,7 @@ export const AddArticle = () => {
     const [imageFile, setImageFile] = useState(null);
     const [mediaType, setMediaType] = useState("");
     const [mediaURL, setMediaURL] = useState("");
-    const [leadStory, setLeadStory] = useState(false); 
+    const [leadStory, setLeadStory] = useState(false);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -23,18 +23,25 @@ export const AddArticle = () => {
         formData.append("content", content);
         formData.append("mediaType", mediaType);
         formData.append("mediaURL", mediaURL);
-        formData.append("leadStory", leadStory ? "1" : "0"); 
+        formData.append("leadStory", leadStory ? "1" : "0");
 
         if (imageFile) {
-            formData.append("thumbnailURL", imageFile); 
+            formData.append("thumbnailURL", imageFile);
         } else {
             formData.append("thumbnailURL", imageURL);
         }
 
         try {
-            const response = await axios.post("http://localhost:8000/api/articles", formData, {
-                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            });
+            const response = await axios.post(
+                "http://localhost:8000/api/articles",
+                formData,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                }
+            );
 
             if (response.status === 201) {
                 alert("Article Submitted Successfully!");
@@ -56,7 +63,9 @@ export const AddArticle = () => {
                     className="w-full h-full object-cover opacity-70"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <h1 className="text-3xl text-[#090920] font-bold">Add New Article</h1>
+                    <h1 className="text-3xl text-[#090920] font-bold">
+                        Add New Article
+                    </h1>
                 </div>
             </div>
 
@@ -87,7 +96,10 @@ export const AddArticle = () => {
                         <h2 className="text-2xl font-bold text-center text-[#851515] mb-10 mt-2">
                             Share A Digital Postcard With The World!
                         </h2>
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="flex flex-col gap-8"
+                        >
                             <input
                                 type="text"
                                 placeholder="Title"
@@ -109,11 +121,6 @@ export const AddArticle = () => {
                                 placeholder="Image URL (optional)"
                                 value={imageURL}
                                 onChange={(e) => setImageURL(e.target.value)}
-                                className="p-3 border rounded-lg w-full"
-                            />
-                            <input
-                                type="file"
-                                onChange={(e) => setImageFile(e.target.files[0])}
                                 className="p-3 border rounded-lg w-full"
                             />
                             <textarea
@@ -148,10 +155,14 @@ export const AddArticle = () => {
                                     type="checkbox"
                                     id="leadStory"
                                     checked={leadStory}
-                                    onChange={(e) => setLeadStory(e.target.checked)}
+                                    onChange={(e) =>
+                                        setLeadStory(e.target.checked)
+                                    }
                                     className="mr-2"
                                 />
-                                <label htmlFor="leadStory">Mark as Lead Story</label>
+                                <label htmlFor="leadStory">
+                                    Mark as Lead Story
+                                </label>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -161,7 +172,10 @@ export const AddArticle = () => {
                                 >
                                     Submit Article
                                 </button>
-                                <NavLink to={"/anytrip"} className="text-[#851515] mt-3">
+                                <NavLink
+                                    to={"/anytrip"}
+                                    className="text-[#851515] mt-3"
+                                >
                                     <b>Cancel</b>
                                 </NavLink>
                             </div>
