@@ -9,7 +9,7 @@ export const ErrorPage = () => {
 
             <div className="relative w-full h-[500px]">
                 <img
-                    src="src/images/Error.jpg"
+                    src="src/images/Error.webp"
                     alt="Error"
                     className="w-full h-full object-cover opacity-60"
                 />
